@@ -1,3 +1,8 @@
-| Problem | Difficulty | LeetCode Link |
-| ------- | ---------- | ------------- |
-| [118-PascalsTriangle](./03-Array/03-Hard/118-Pascals-Triangle) | [Hard] | [Link](https://leetcode.com/problems/pascals-triangle/description/) |
+
+## 03-Array
+
+### 03-Hard
+
+| # | Problem | Difficulty | LeetCode Link |
+| - | ------- | ---------- | ------------- |
+| 1 | [229-Majority-Element-II](./03-array/03-hard/229-majority-element-ii) | Hard | [some](some) |
