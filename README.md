@@ -62,3 +62,4 @@
 |  Problem  |  Leetcode Link  |  Difficulty  |
 |---|---|---|
 | [Implement-the-lower-bound](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/06-Binary-Search/01-Binary-search-on-1D-Array/Implement-the-lower-bound) | n/a | Easy |
+| Implement-the-upper-bound | n/a | Easy |
