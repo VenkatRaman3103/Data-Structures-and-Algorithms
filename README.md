@@ -59,7 +59,8 @@
 
 ## 01-Binary-Search-on-1D-Array
 
-|  Problem  |  Leetcode Link  |  Difficulty  |
-|---|---|---|
-| [Implement-the-lower-bound](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/06-Binary-Search/01-Binary-search-on-1D-Array/Implement-the-lower-bound) | n/a | Easy |
-| [Implement-the-upper-bound](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/06-Binary-Search/01-Binary-search-on-1D-Array/Implement-the-upper-bound) | n/a | Easy |
+| s.no |  Problem  |  Leetcode Link  |  Difficulty  |
+|---|---|---| --- |
+| 1 | [Implement-the-lower-bound](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/06-Binary-Search/01-Binary-search-on-1D-Array/Implement-the-lower-bound) | n/a | Easy |
+| 2 | [Implement-the-upper-bound](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/06-Binary-Search/01-Binary-search-on-1D-Array/Implement-the-upper-bound) | n/a | Easy |
+| 3 | [35-Search-Insert-Position](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/06-Binary-Search/01-Binary-search-on-1D-Array/35-Search-Insert-Position) | [Link↗](https://leetcode.com/problems/search-insert-position/description/) | Easy |
