@@ -9,34 +9,35 @@ The upper bound implementation involves using binary search to find the smallest
 ## Explanation
 1. Sort the input array `arr`.
 2. Initialize two pointers, `start` and `end`, to mark the beginning and end of the search range, respectively.
-3. While `start` is less than `end`, perform the following steps:
+3. While `start` is less than or equal to `end`, perform the following steps:
     - Calculate the middle index `mid` of the current search range.
-    - If the element at index `mid` is greater than the target value `x`, update the `end` pointer to `mid - 1`.
-    - If the element at index `mid` is less than the target value `x`, update the `start` pointer to `mid + 1`.
-    - If the element at index `mid` is equal to the target value `x`, update the `start` pointer to `mid + 1`.
+    - If the element at index `mid` is greater than the target value `x`, update the `end` pointer to `mid`.
+    - If the element at index `mid` is less than or equal to the target value `x`, update the `start` pointer to `mid + 1`.
 4. Return the element at the `start` index if it exists, otherwise return -1, indicating that no upper bound exists.
 
 ## Code
 ```python
+from typing import *
 
-
-def implementUpperBound(arr, n, x):
+def implementUpperBound(arr: List[int], n: int, x: int) -> int:
     arr.sort()
 
     start = 0
-    end = n - 1
+    end = n
+    ans = n
 
     while start < end:
-        mid = (start + end ) // 2
+        mid = (start + end) // 2
 
-        if arr[mid] > x:
-            return arr[mid]
-        elif arr[mid] < x:
+        if x < arr[mid]:
+            ans = mid
+            end = mid
+
+        else:
             start = mid + 1
-        elif x < arr[mid]:
-            end = mid - 1
 
-    return -1
+    return ans
+
 
 ```
 

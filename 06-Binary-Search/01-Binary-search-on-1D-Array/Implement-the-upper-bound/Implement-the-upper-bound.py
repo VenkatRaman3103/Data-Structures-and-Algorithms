@@ -6,18 +6,17 @@ def implementUpperBound(arr, n, x):
 
     start = 0
     end = n - 1
+    ans = n
 
     while start < end:
-        mid = (start + end ) // 2
+        mid = (start + end) // 2
 
-        if arr[mid] > x:
-            return arr[mid]
-        
-        elif arr[mid] < x:
+        if  x < arr[mid] :
+            ans = mid
+
+            end = mid - 1
+
+        elif arr[mid] <= x:
             start = mid + 1
 
-        elif x < arr[mid] :
-            end = mid - 1
-    
-    
-    return -1
+    return ans

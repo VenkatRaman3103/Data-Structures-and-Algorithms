@@ -19,28 +19,32 @@ This algorithm sorts the array first to ensure that binary search can be applied
 
 ## Code
 ```python
+
+
 from typing import *
 
-def implementLowerBound(arr, n, x):
+def implementLowerBound(arr: List[int], n: int, x: int) -> int:
     arr.sort()
 
     start = 0
     end = n - 1
 
+    ans = n 
+
     while start < end:
         mid = (start + end) // 2
-
-        if arr[mid] >= x:
-            return arr[mid]
-        elif arr[mid] < x:
+        
+        if arr[mid] < x:
+            ans = mid
             start = mid + 1
-        elif x < arr[mid]:
+
+        elif x <= arr[mid]:
             end = mid - 1
-    
-    return -1
+            
+    return ans
+
 ```
 
 # Time and Space Complexities Analysis
-
 - Time Complexity: O(log n) for binary search, where n is the size of the input array. Sorting the array adds an additional O(n log n), but since it's dominated by the binary search, the overall time complexity is O(log n).
 - Space Complexity: O(1) as the algorithm operates in-place without any additional data structures.
