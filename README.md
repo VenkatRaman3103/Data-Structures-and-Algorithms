@@ -1,8 +1,27 @@
+# 01-Basics
 
-## 03-Array
+# 02-Sorting-Technique
 
-### 01-Easy
+# 03-Array
 
-| # | Problem | Difficulty | LeetCode Link |
-| - | ------- | ---------- | ------------- |
-| 1 | 1752-Check-if-Array-Is-Sorted-and-Rotated | Easy | [https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/](https://leetcode.com/problems/check-if-array-is-sorted-and-rotated/description/) |
+## 01-Easy
+
+|  Problem  |  Leetcode Link  |  Difficulty  |
+|---|---|---|
+
+
+## 02-Medium
+
+## 03-Hard
+
+# 04-Pointers
+
+# 05-Sliding-Window
+
+# 06-Binary-Search
+
+## 01-Binary-Search-on-1D-Array
+
+|  Problem  |  Leetcode Link  |  Difficulty  |
+|---|---|---|
+| [Implement-the-lower-bound](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/06-Binary-Search/01-Binary-search-on-1D-Array/Implement-the-lower-bound) | | Easy |
