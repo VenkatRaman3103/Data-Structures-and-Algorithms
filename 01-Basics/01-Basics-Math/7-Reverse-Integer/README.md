@@ -1,9 +1,9 @@
-### Reverse Integer
+# Reverse Integer
 
-#### Intuition
+## Intuition
 The problem requires reversing the digits of an integer while preserving its sign. We need to handle overflow cases where the reversed integer might exceed the signed 32-bit integer range. 
 
-#### Approach
+## Approach
 1. Define constants for maximum and minimum integer values.
 2. Determine the sign of the input integer.
 3. Take the absolute value of the integer to perform reversal.
@@ -13,7 +13,7 @@ The problem requires reversing the digits of an integer while preserving its sig
 7. Check for overflow by comparing the reversed number with the integer limits.
 8. Return the reversed number with the appropriate sign.
 
-#### Explanation
+## Explanation
 - The function `reverse(x: int) -> int` takes an integer `x` and returns its reversed form.
 - It first determines the sign of the input integer.
 - Then it takes the absolute value of the integer to perform reversal.
@@ -21,7 +21,8 @@ The problem requires reversing the digits of an integer while preserving its sig
 - After the loop, it checks for overflow and returns 0 if the reversed number exceeds the signed 32-bit integer range.
 - Finally, it returns the reversed number with the appropriate sign.
 
-#### Code
+## Code
+
 ```python
 
 
