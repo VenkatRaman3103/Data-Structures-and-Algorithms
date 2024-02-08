@@ -6,6 +6,8 @@
 | --- | ----------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ---------- |
 | 1   | [7-Reverse-Integer](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/01-Basics/01-Basics-Math/7-Reverse-Integer)     | [Link](https://leetcode.com/problems/reverse-integer/description/)                  | Medium     |
 | 2   | [9-Palindrome-Number](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/01-Basics/01-Basics-Math/9-Palindrome-Number) | [Link](https://leetcode.com/problems/palindrome-number/description/) |Easy |
+| 3 | [Armstrong-Numbers](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/01-Basics/01-Basics-Math/Armstrong-Numbers) | n/a | Easy |
+
 
 ## 02-recursive
 
