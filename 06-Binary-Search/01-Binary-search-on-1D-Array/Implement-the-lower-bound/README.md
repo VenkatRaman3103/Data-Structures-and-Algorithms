@@ -31,10 +31,10 @@ def implementLowerBound(arr: List[int], n: int, x: int) -> int:
 
     ans = n 
 
-    while start < end:
+    while start <= end:
         mid = (start + end) // 2
         
-        if arr[mid] < x:
+        if arr[mid] <= x:
             ans = mid
             start = mid + 1
 

@@ -8,7 +8,7 @@ def implementUpperBound(arr, n, x):
     end = n - 1
     ans = n
 
-    while start < end:
+    while start <= end:
         mid = (start + end) // 2
 
         if  x < arr[mid] :
