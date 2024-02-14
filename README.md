@@ -10,12 +10,12 @@
 
 ## 02-recursive
 
-| Problem                                                                                                                                                           | Leetcode Link                                            | Difficulty |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------- |
-| [Factorial-Number](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/01-Basics/02-Recursion/Factorial-Number)                           | n/a                                                      | Easy       |
-| [Reverse-Array-using-Recursion](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/01-Basics/02-Recursion/Reverse-Array-using-Recursion) | n/a                                                      | Easy       |
-| [125-Valid-Palindrome](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/01-Basics/02-Recursion/125-Valid-Palindrome)                   | [Link↗](https://leetcode.com/problems/valid-palindrome/) | Easy       |
-| [Factorial-Number](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/01-Basics/02-Recursion/Factorial-Number)                           | n/a | Easy |
+| | Problem                                                                                                                                                           | Leetcode Link                                            | Difficulty |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- | ---------- |
+| 1 | [Factorial-Number](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/01-Basics/02-Recursion/Factorial-Number)                           | n/a                                                      | Easy       |
+| 2 | [Reverse-Array-using-Recursion](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/01-Basics/02-Recursion/Reverse-Array-using-Recursion) | n/a                                                      | Easy       |
+| 3 | [125-Valid-Palindrome](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/01-Basics/02-Recursion/125-Valid-Palindrome)                   | [Link↗](https://leetcode.com/problems/valid-palindrome/) | Easy       |
+| 4 | [Factorial-Number](https://github.com/VenkatRaman3103/Data-Structures-and-Algorithms/tree/main/01-Basics/02-Recursion/Factorial-Number)                           | n/a | Easy |
 
 ## 03-hashing
 
