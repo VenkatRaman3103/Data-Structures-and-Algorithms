@@ -15,12 +15,13 @@ public:
                 {
                     // swapping
                     int temp = arr[j];
-                    arr[j] = arr[i];
-                    arr[i] = temp;
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
                 }
             }
             cout << endl;
         }
+        return arr;
     }
 };
 
@@ -28,7 +29,7 @@ void PrintAnArray(vector<int> arr)
 {
     for (int n : arr)
     {
-        cout << n << endl;
+        cout << n;
     }
 }
 
