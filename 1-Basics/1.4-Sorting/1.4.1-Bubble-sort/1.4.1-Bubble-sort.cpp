@@ -11,13 +11,12 @@ public:
         {
             for (int j = 0; j <= (arr.size() - i) - 1; j++)
             {
-                if(arr[j] > arr[j + 1]){
+                if (arr[j] > arr[j + 1])
+                {
                     // swapping
                     int temp = arr[j];
                     arr[j] = arr[i];
                     arr[i] = temp;
-
-
                 }
             }
             cout << endl;
@@ -25,9 +24,18 @@ public:
     }
 };
 
+void PrintAnArray(vector<int> arr)
+{
+    for (int n : arr)
+    {
+        cout << n << endl;
+    }
+}
+
 int main()
 {
     vector<int> arr = {2, 3, 1, 5, 4};
     Solution solution;
     solution.bubbleSort(arr);
+    PrintAnArray(solution.bubbleSort(arr));
 }
