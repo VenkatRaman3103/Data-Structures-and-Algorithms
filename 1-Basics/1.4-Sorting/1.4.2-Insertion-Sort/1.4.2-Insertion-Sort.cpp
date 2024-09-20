@@ -12,6 +12,7 @@ public:
             int element = arr[i];
 
             int j = i;
+            
             while (j > 0 && arr[j - 1] > element)
             {
                 arr[j] = arr[j-1];
