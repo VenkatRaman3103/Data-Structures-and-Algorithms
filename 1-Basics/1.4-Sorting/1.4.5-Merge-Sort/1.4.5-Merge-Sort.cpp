@@ -5,11 +5,20 @@ using namespace std;
 class Solution
 {
 public:
-    int mergeSort(vector<int> arr)
+    vector<int> mergeSort(int start, int end, vector<int> arr)
     {
         int mid = arr.size() / 2;
+        
+        // base case
+        if (start >= end)
+        {
+            return arr;
+        }
 
-        return mid;
+        mergeSort(end, mid, arr);
+        mergeSort(mid + 1, end, arr);
+
+        return arr;
     }
 };
 
@@ -27,6 +36,5 @@ int main()
 
     Solution solution;
 
-    // PrintAnArray(solution.mergeSort(arr));
-    cout << solution.mergeSort(arr) << endl;
+    PrintAnArray(solution.mergeSort(0, arr.size()-1, arr));
 }
