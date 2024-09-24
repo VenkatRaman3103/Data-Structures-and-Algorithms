@@ -4,7 +4,6 @@ using namespace std;
 
 void Merging(int start, int mid, int end, vector<int> &arr)
 {
-    // pointer
     int left = start;
     int right = mid + 1;
 
