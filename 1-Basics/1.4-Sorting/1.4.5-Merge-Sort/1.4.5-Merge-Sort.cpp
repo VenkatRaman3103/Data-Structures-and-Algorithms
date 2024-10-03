@@ -5,7 +5,7 @@ using namespace std;
 class Solution
 {
 public:
-    void mergeSort(int start, int end, vector<int>& arr)
+    void mergeSort(int start, int end, vector<int> &arr)
     {
 
         // base case
@@ -13,7 +13,7 @@ public:
         {
             return;
         }
-        int mid = start + (end - start) / 2;
+        int mid = (start + end) / 2;
 
         mergeSort(start, mid, arr);
         mergeSort(mid + 1, end, arr);
@@ -21,7 +21,7 @@ public:
         merging(start, mid, end, arr);
     }
 
-    void merging(int start, int mid, int end, vector<int>& arr)
+    void merging(int start, int mid, int end, vector<int> &arr)
     {
         vector<int> tempArr;
 
@@ -35,7 +35,8 @@ public:
                 tempArr.push_back(arr[left]);
                 left++;
             }
-            else {
+            else
+            {
                 tempArr.push_back(arr[right]);
                 right++;
             };
@@ -60,7 +61,7 @@ public:
     };
 };
 
-void PrintAnArray(vector<int>& arr)
+void PrintAnArray(vector<int> &arr)
 {
     for (int n : arr)
     {
