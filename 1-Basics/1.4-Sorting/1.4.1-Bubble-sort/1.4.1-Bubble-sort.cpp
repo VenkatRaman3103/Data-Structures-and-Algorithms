@@ -2,40 +2,39 @@
 #include <vector>
 using namespace std;
 
-class Solution
+void swap(int a, int b, vector<int> &arr)
 {
-public:
-    vector<int> bubbleSort(vector<int> arr)
+    int temp = arr[a];
+    arr[a] = arr[b];
+    arr[b] = temp;
+}
+
+vector<int> bubbleSort(vector<int> arr)
+{
+    for (int i = 0; i < arr.size(); i++)
     {
-        for (int i = 0; i < arr.size(); i++)
+        for (int j = 1; j < arr.size() - i; j++)
         {
-            for (int j = 0; j < arr.size() - i; j++)
+            if (arr[j] < arr[j - 1])
             {
-                if (arr[j] > arr[j + 1])
-                {
-                    // swapping
-                    int temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
-                }
+                swap(j, j - 1, arr);
             }
         }
-        return arr;
     }
-};
+    return arr;
+}
 
-void PrintAnArray(vector<int> arr)
+void printArray(vector<int> arr)
 {
-    for (int n : arr)
+    for (int i = 0; i < arr.size(); i++)
     {
-        cout << n;
+        cout << arr[i] << " ";
     }
+    cout << endl;
 }
 
 int main()
 {
-    vector<int> arr = {2, 3, 1, 5, 4};
-    Solution solution;
-    solution.bubbleSort(arr);
-    PrintAnArray(solution.bubbleSort(arr));
+    vector<int> arr = {5, 3, 4, 2, 1};
+    printArray(bubbleSort(arr));
 }
