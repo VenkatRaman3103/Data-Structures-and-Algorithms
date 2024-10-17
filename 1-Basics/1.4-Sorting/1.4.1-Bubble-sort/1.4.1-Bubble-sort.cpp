@@ -9,8 +9,6 @@ void swap(int a, int b, vector<int> &arr)
     arr[b] = temp;
 }
 
-
-
 vector<int> bubbleSort(vector<int> arr)
 {
     for (int i = 0; i < arr.size(); i++)
@@ -25,8 +23,6 @@ vector<int> bubbleSort(vector<int> arr)
     }
     return arr;
 }
-
-
 
 void printArray(vector<int> arr)
 {
