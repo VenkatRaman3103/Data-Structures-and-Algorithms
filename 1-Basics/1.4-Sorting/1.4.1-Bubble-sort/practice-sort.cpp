@@ -2,32 +2,33 @@
 #include <vector>
 using namespace std;
 
-vector<int> bubbleSort(vector<int>arr){
+vector<int> bubbleSort(vector<int> nums) {
 
-  for (int i = 0; i < arr.size(); i++) {
-      
-    for(int j = 1; j < arr.size() - i; j++){
-      if(arr[j-1] > arr[j]){
-        // swapping
-        int temp = arr[j];
-        arr[j] = arr[j - 1];
-        arr[j - 1] = temp;
-      }
+    for (int i = 0; i < nums.size(); i++) {
+
+        for (int j = 1; j < nums.size() - i; j++) {
+
+            if (nums[j] < nums[j - 1]) {
+
+                // swap
+                int temp = nums[j];
+                nums[j] = nums[j - 1];
+                nums[j - 1] = temp;
+            }
+        }
     }
-  } 
-   
-  return arr;
+
+    return nums;
 }
 
-void printAnArray(vector<int>arr){
-
-  for (int i = 0; i < arr.size(); i++) {
-     cout << arr[i] << " ";
-  }
-  cout << endl;
+void printAnArray(vector<int> nums) {
+    for (int i = 0; i < nums.size(); i++) {
+        cout << nums[i] << endl;
+    }
 }
 
-int main(){
-  vector<int> arr = {4, 3, 1, 5, 2};
-  printAnArray(bubbleSort(arr));
+int main() {
+    vector<int> arr = {3, 2, 4, 1, 5};
+
+    printAnArray(bubbleSort(arr));
 }
