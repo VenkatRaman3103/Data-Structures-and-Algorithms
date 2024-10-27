@@ -13,14 +13,12 @@ vector<int> insertionSort(vector<int> nums) {
             if (nums[j] < nums[min]) {
                 min = j;
             }
-
             // swap
             int temp = nums[min];
             nums[min] = nums[i];
             nums[i] = temp;
         }
     }
-
     return nums;
 };
 
