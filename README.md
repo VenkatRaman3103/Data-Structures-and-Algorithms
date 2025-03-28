@@ -1,5 +1,3 @@
-hello world
-
 # 01-Basics
 
 ## 01-basic-math
