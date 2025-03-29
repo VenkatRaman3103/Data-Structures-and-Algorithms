@@ -1,6 +1,6 @@
 import readline from 'readline-sync';
 
-function getUserInput(bool) {
+function getUserInput(bool = true) {
     let userInput;
 
     if (bool) {
@@ -28,7 +28,7 @@ function isEven(num) {
     console.log(output);
 }
 
-// isEven(getUserInput(true));
+// isEven(getUserInput());
 
 // COMPLETE: Write a program to check if a number is positive, negative, or zero
 function signCheck(num) {
@@ -41,7 +41,7 @@ function signCheck(num) {
     }
 }
 
-// signCheck(getUserInput(true));
+// signCheck(getUserInput());
 
 // COMPLETE: Check if a person is eligible to vote (age >= 18)
 function votingEligibility(age) {
@@ -52,7 +52,7 @@ function votingEligibility(age) {
     }
 }
 
-// votingEligibility(getUserInput(true));
+// votingEligibility(getUserInput());
 
 // COMPLETE: Find the greater of two numbers
 function findGreatest(num1, num2) {
@@ -65,7 +65,7 @@ function findGreatest(num1, num2) {
     }
 }
 
-// findGreatest(getUserInput(true), getUserInput(true));
+// findGreatest(getUserInput(), getUserInput());
 
 // COMPLETE: Check if a number is divisible by both 5 and 11
 function isDivisibleByFiveAdnEleven(num) {
@@ -81,10 +81,20 @@ function isDivisibleByFiveAdnEleven(num) {
     }
 }
 
-// isDivisibleByFiveAdnEleven(getUserInput(true));
+// isDivisibleByFiveAdnEleven(getUserInput());
 
 // NOTE: Intermediate Level
-// TODO: Implement a leap year checker
+// COMPLETE: Implement a leap year checker
+function isLeapYear(year) {
+    if (year % 4 == 0) {
+        console.log(`${year} is a leap year`);
+    } else {
+        console.log(`${year} is not a leap year`);
+    }
+}
+
+isLeapYear(getUserInput());
+
 // TODO: Create a grade calculator (A, B, C, D, F based on marks)
 // TODO: Check if three given sides form a valid triangle
 // TODO: Identify if a character is a vowel, consonant, digit, or special character
