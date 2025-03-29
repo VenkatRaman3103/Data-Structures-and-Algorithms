@@ -1,2 +1,33 @@
-test.exe
-# Rough
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Git files
+.git/
+
+# Ignore VSCode settings (optional)
+.vscode/
+
+# Ignore compiled binaries and executables
+*.exe
+*.out
+*.o
+
+# Ignore Python virtual environment
+python/venv/
+python/__pycache__/
+*.pyc
+
+# Ignore Rust build directory
+rust/target/
+
+# Ignore Node.js dependencies
+node_modules/
+js/node_modules/
+ts/node_modules/
+
+# Ignore package lock files (if you prefer to exclude them)
+**/package-lock.json
+
+# Ignore Rust Cargo lock (optional)
+rust/Cargo.lock
