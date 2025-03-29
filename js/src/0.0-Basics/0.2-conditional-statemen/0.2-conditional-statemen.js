@@ -57,15 +57,15 @@ function votingEligibility(age) {
 // COMPLETE: Find the greater of two numbers
 function findGreatest(num1, num2) {
     if (num1 > num2) {
-        return num1;
+        console.log(`${num1} is greater than ${num2}`);
     } else if (num1 < num2) {
-        return num2;
+        console.log(`${num2} is greater than ${num1}`);
     } else {
         console.log(`both ${num1} and ${num2} are equal`);
     }
 }
 
-// findGreatest(getUserInput(true), getUserInput(true));
+findGreatest(getUserInput(true), getUserInput(true));
 
 // TODO: Check if a number is divisible by both 5 and 11
 
