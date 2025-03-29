@@ -30,7 +30,7 @@ function isEven(num) {
 
 // isEven(getUserInput(true));
 
-// TODO: Write a program to check if a number is positive, negative, or zero
+// COMPLETE: Write a program to check if a number is positive, negative, or zero
 function signCheck(num) {
     if (num < 0) {
         console.log(`${num} is negative`);
@@ -41,10 +41,32 @@ function signCheck(num) {
     }
 }
 
-signCheck(getUserInput(true));
+// signCheck(getUserInput(true));
 
-// TODO: Check if a person is eligible to vote (age >= 18)
-// TODO: Find the greater of two numbers
+// COMPLETE: Check if a person is eligible to vote (age >= 18)
+function votingEligibility(age) {
+    if (age >= 18) {
+        console.log('you are eligible for voting');
+    } else {
+        console.log('you are not eligible for voting');
+    }
+}
+
+// votingEligibility(getUserInput(true));
+
+// COMPLETE: Find the greater of two numbers
+function findGreatest(num1, num2) {
+    if (num1 > num2) {
+        return num1;
+    } else if (num1 < num2) {
+        return num2;
+    } else {
+        console.log(`both ${num1} and ${num2} are equal`);
+    }
+}
+
+// findGreatest(getUserInput(true), getUserInput(true));
+
 // TODO: Check if a number is divisible by both 5 and 11
 
 // NOTE: Intermediate Level
