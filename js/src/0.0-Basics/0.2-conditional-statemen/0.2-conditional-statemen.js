@@ -65,9 +65,23 @@ function findGreatest(num1, num2) {
     }
 }
 
-findGreatest(getUserInput(true), getUserInput(true));
+// findGreatest(getUserInput(true), getUserInput(true));
 
-// TODO: Check if a number is divisible by both 5 and 11
+// COMPLETE: Check if a number is divisible by both 5 and 11
+function isDivisibleByFiveAdnEleven(num) {
+    let isDivisibleByEleven = num % 11 == 0;
+    let isDivisibleByFive = num % 5 == 0;
+
+    if (isDivisibleByEleven) {
+        console.log(`${num} is divible by 11`);
+    } else if (isDivisibleByFive) {
+        console.log(`${num} is divible by 5`);
+    } else {
+        console.log(`${num} nor divisible by 5 neither by 11`);
+    }
+}
+
+// isDivisibleByFiveAdnEleven(getUserInput(true));
 
 // NOTE: Intermediate Level
 // TODO: Implement a leap year checker
