@@ -31,7 +31,17 @@ function isEven(num) {
 // isEven(getUserInput(true));
 
 // TODO: Write a program to check if a number is positive, negative, or zero
-function signCheck(num) {}
+function signCheck(num) {
+    if (num < 0) {
+        console.log(`${num} is negative`);
+    } else if (num > 0) {
+        console.log(`${num} is positive`);
+    } else {
+        console.log(`${num} is zero`);
+    }
+}
+
+signCheck(getUserInput(true));
 
 // TODO: Check if a person is eligible to vote (age >= 18)
 // TODO: Find the greater of two numbers
