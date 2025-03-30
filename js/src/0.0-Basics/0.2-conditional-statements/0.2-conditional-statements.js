@@ -158,7 +158,7 @@ function identifyCharacter(char) {
 
 // identifyCharacter(12);
 
-// TODO: Build a simple calculator (+, -, *, /)
+// COMPLETE: Build a simple calculator (+, -, *, /)
 function simpleCalculator(num1, num2) {
     console.log(
         '\n- subraction,\n- addition,\n- multiplication,\n- division\n'

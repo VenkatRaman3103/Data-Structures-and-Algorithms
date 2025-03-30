@@ -1,11 +1,5 @@
-use std::io;
+mod ch0_0_basics;
 
 fn main() {
-    let mut user_input = String::new();
-
-    io::stdin()
-        .read_line(&mut user_input)
-        .expect("Error in reading the user input");
-
-    println!("user_input: {}", user_input);
+    ch0_0_basics::ch0_2_conditional_statements::is_even();
 }
