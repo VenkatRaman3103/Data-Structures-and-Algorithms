@@ -136,6 +136,28 @@ function willFormTriangle(side_a, side_b, side_c) {
 // willFormTriangle(getUserInput(), getUserInput(), getUserInput());
 
 // TODO: Identify if a character is a vowel, consonant, digit, or special character
+function identifyCharacter(char) {
+    let vowels = ['a', 'u', 'i', 'o', 'e'];
+    let specialCharacter = ['+', '-', '*', '/', '.'];
+
+    if (typeof char == 'string') {
+        if (specialCharacter.includes(char)) {
+            console.log(`${char} is a special character`);
+            return;
+        }
+
+        if (vowels.includes(char)) {
+            console.log(`${char} is a vowel`);
+        } else {
+            console.log(`${char} is a consonant`);
+        }
+    } else {
+        console.log(`${char} is a digit`);
+    }
+}
+
+// identifyCharacter(12);
+
 // TODO: Build a simple calculator (+, -, *, /)
 
 // NOTE: Advanced Level
