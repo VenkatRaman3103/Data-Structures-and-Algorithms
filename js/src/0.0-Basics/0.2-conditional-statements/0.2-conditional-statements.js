@@ -135,7 +135,7 @@ function willFormTriangle(side_a, side_b, side_c) {
 
 // willFormTriangle(getUserInput(), getUserInput(), getUserInput());
 
-// TODO: Identify if a character is a vowel, consonant, digit, or special character
+// COMPLETE: Identify if a character is a vowel, consonant, digit, or special character
 function identifyCharacter(char) {
     let vowels = ['a', 'u', 'i', 'o', 'e'];
     let specialCharacter = ['+', '-', '*', '/', '.'];
@@ -159,6 +159,37 @@ function identifyCharacter(char) {
 // identifyCharacter(12);
 
 // TODO: Build a simple calculator (+, -, *, /)
+function simpleCalculator(num1, num2) {
+    console.log(
+        '\n- subraction,\n- addition,\n- multiplication,\n- division\n'
+    );
+    let operation = getUserInput();
+
+    function subraction(num1, num2) {
+        console.log(num1 - num2);
+    }
+    function sum(num1, num2) {
+        console.log(num1 + num2);
+    }
+    function division(num1, num2) {
+        console.log(num1 / num2);
+    }
+    function multiplication(num1, num2) {
+        console.log(num1 * num2);
+    }
+
+    if (operation == 'addition') {
+        sum(num1, num2);
+    } else if (operation == 'subraction') {
+        subraction(num1, num2);
+    } else if (operation == 'division') {
+        division(num1, num2);
+    } else if (operation == 'multiplication') {
+        multiplication(num1, num2);
+    }
+}
+
+// simpleCalculator(Number(getUserInput()), Number(getUserInput()));
 
 // NOTE: Advanced Level
 // TODO: Find the largest of three numbers
