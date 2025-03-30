@@ -112,9 +112,29 @@ function gradeCalulator(grade) {
     }
 }
 
-gradeCalulator(getUserInput());
+// gradeCalulator(getUserInput());
 
-// TODO: Check if three given sides form a valid triangle
+// COMPLETE: Check if three given sides form a valid triangle
+function willFormTriangle(side_a, side_b, side_c) {
+    function sum(side1, side2) {
+        return side1 + side2;
+    }
+
+    if (
+        sum(side_a, side_b) > side_c &&
+        sum(side_b, side_c) > side_a &&
+        sum(side_c, side_a) > side_b
+    ) {
+        console.log('Valid triangle');
+        return true;
+    } else {
+        console.log('Invalid triangle');
+        return false;
+    }
+}
+
+// willFormTriangle(getUserInput(), getUserInput(), getUserInput());
+
 // TODO: Identify if a character is a vowel, consonant, digit, or special character
 // TODO: Build a simple calculator (+, -, *, /)
 
