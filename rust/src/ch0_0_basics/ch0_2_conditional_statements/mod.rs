@@ -59,7 +59,7 @@ pub fn votingEligibility() {
     }
 }
 
-// TODO: Find the greater of two numbers
+// COMPLETE: Find the greater of two numbers
 pub fn find_greatest() {
     let num_1: i32 = get_user_input()
         .parse()
@@ -69,12 +69,10 @@ pub fn find_greatest() {
         .parse()
         .expect("error in parsing the user input 2");
 
-    if num_2 > num_1 {
-        println!("{} is greater than {}", num_2, num_1)
-    } else if num_1 > num_2 {
-        println!("{} is greater than {}", num_1, num_2)
-    } else {
-        println!("bot {} and {} are equal", num_1, num_2)
+    match num_1 {
+        num_1 if num_1 > num_2 => println!("{} is greater than {}", num_1, num_2),
+        num_1 if num_2 > num_1 => println!("{} is greater than {}", num_2, num_1),
+        _ => println!("{} is equal to {}", num_2, num_1),
     }
 }
 
