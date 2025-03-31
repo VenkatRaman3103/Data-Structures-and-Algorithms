@@ -81,7 +81,7 @@ pub fn find_greatest() {
     }
 }
 
-// TODO: Check if a number is divisible by both 5 and 11
+// COMPLETE: Check if a number is divisible by both 5 and 11
 #[allow(dead_code)]
 pub fn is_divisible_5_and_11() {
     let num: i32 = get_user_input()
