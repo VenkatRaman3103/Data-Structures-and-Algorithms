@@ -99,7 +99,19 @@ pub fn is_divisible_5_and_11() {
 
 // NOTE: Intermediate Level
 
-// TODO: Implement a leap year checker
+// COMPLETE: Implement a leap year checker
+pub fn check_leap_year() {
+    let year: i32 = get_user_input()
+        .parse()
+        .expect("error in getting user input");
+
+    if year % 4 == 0 {
+        println!("{} is a leap year", year)
+    } else {
+        println!("{} is a not leap year", year)
+    }
+}
+
 // TODO: Create a grade calculator (A, B, C, D, F based on marks)
 // TODO: Check if three given sides form a valid triangle
 // TODO: Identify if a character is a vowel, consonant, digit, or special character
