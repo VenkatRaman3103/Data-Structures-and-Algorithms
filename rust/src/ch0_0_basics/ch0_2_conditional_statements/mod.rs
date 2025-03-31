@@ -114,6 +114,7 @@ pub fn check_leap_year() {
 }
 
 // COMPLETE: Create a grade calculator (A, B, C, D, F based on marks)
+#[allow(dead_code)]
 pub fn grade_calculator() {
     let mark: i32 = get_user_input()
         .parse()
