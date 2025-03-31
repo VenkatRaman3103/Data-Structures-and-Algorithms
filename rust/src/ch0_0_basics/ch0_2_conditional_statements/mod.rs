@@ -100,6 +100,7 @@ pub fn is_divisible_5_and_11() {
 // NOTE: Intermediate Level
 
 // COMPLETE: Implement a leap year checker
+#[allow(dead_code)]
 pub fn check_leap_year() {
     let year: i32 = get_user_input()
         .parse()
@@ -112,7 +113,29 @@ pub fn check_leap_year() {
     }
 }
 
-// TODO: Create a grade calculator (A, B, C, D, F based on marks)
+// COMPLETE: Create a grade calculator (A, B, C, D, F based on marks)
+pub fn grade_calculator() {
+    let mark: i32 = get_user_input()
+        .parse()
+        .expect("error in getting user mark");
+
+    if (90..100).contains(&mark) {
+        println!("A grade");
+    } else if (80..90).contains(&mark) {
+        println!("B grade");
+    } else if (70..80).contains(&mark) {
+        println!("C grade");
+    } else if (60..70).contains(&mark) {
+        println!("D grade");
+    } else if (50..60).contains(&mark) {
+        println!("E grade");
+    } else if (0..50).contains(&mark) {
+        println!("D grade");
+    } else {
+        println!("Invalid mark")
+    }
+}
+
 // TODO: Check if three given sides form a valid triangle
 // TODO: Identify if a character is a vowel, consonant, digit, or special character
 // TODO: Build a simple calculator (+, -, *, /)
