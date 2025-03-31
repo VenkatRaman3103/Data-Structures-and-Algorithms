@@ -138,6 +138,7 @@ pub fn grade_calculator() {
 }
 
 // COMPLETE: Check if three given sides form a valid triangle
+#[allow(dead_code)]
 pub fn is_valid_triangle() {
     let side_1: i32 = get_user_input().parse().expect("error in getting side_1");
     let side_2: i32 = get_user_input().parse().expect("error in getting side_2");
@@ -150,7 +151,24 @@ pub fn is_valid_triangle() {
     }
 }
 
-// TODO: Identify if a character is a vowel, consonant, digit, or special character
+// COMPLETE: Identify if a character is a vowel, consonant, digit, or special character
+pub fn indentify_character() {
+    let vowels = ["a", "u", "i", "o", "e"];
+    let special_character = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
+
+    let user_input = get_user_input();
+
+    if vowels.contains(&user_input.as_str()) {
+        println!("{} is vowels", user_input)
+    } else if special_character.contains(&user_input.as_str()) {
+        println!("{} is special character", user_input)
+    } else if user_input.parse::<i32>().is_ok() {
+        println!("{} is a number", user_input);
+    } else {
+        println!("{} is consonant", user_input)
+    }
+}
+
 // TODO: Build a simple calculator (+, -, *, /)
 
 // NOTE: Advanced Level
