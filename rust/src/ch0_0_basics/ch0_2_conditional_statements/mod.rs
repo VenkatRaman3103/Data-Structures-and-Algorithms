@@ -1,5 +1,6 @@
 use std::{any::type_name, io};
 
+#[allow(dead_code)]
 fn type_of<T>(_: &T) -> &'static str {
     type_name::<T>()
 }
@@ -17,6 +18,7 @@ fn get_user_input() -> std::string::String {
 // NOTE: Basic Level
 
 // COMPLETE: Write a program to check if a number is even or odd
+#[allow(dead_code)]
 pub fn is_even() {
     let num: i32 = get_user_input().parse().expect("Invalid type");
 
@@ -34,6 +36,7 @@ pub fn is_even() {
 }
 
 // COMPLETE: Write a program to check if a number is positive, negative, or zero
+#[allow(dead_code)]
 pub fn check_sign() {
     let user_input: i32 = get_user_input()
         .parse()
@@ -47,7 +50,8 @@ pub fn check_sign() {
 }
 
 // COMPLETE: Check if a person is eligible to vote (age >= 18)
-pub fn votingEligibility() {
+#[allow(dead_code)]
+pub fn voting_eligibility() {
     let age: i32 = get_user_input()
         .parse()
         .expect("error in parsing the user input");
@@ -60,6 +64,7 @@ pub fn votingEligibility() {
 }
 
 // COMPLETE: Find the greater of two numbers
+#[allow(dead_code)]
 pub fn find_greatest() {
     let num_1: i32 = get_user_input()
         .parse()
@@ -77,6 +82,20 @@ pub fn find_greatest() {
 }
 
 // TODO: Check if a number is divisible by both 5 and 11
+#[allow(dead_code)]
+pub fn is_divisible_5_and_11() {
+    let num: i32 = get_user_input()
+        .parse()
+        .expect("error in parsing the user input 1");
+
+    if num % 5 == 0 {
+        println!("{} is divisble by 5", num);
+    } else if num % 11 == 0 {
+        println!("{} is divisble by 11", num)
+    } else {
+        println!("{} is neither divisble by 11 nor by 5", num)
+    }
+}
 
 // NOTE: Intermediate Level
 
