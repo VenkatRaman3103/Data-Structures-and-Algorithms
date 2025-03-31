@@ -9,4 +9,5 @@ fn main() {
     // ch0_0_basics::ch0_2_conditional_statements::is_divisible_5_and_11();
     // ch0_0_basics::ch0_2_conditional_statements::check_leap_year();
     // ch0_0_basics::ch0_2_conditional_statements::grade_calculator();
+    ch0_0_basics::ch0_2_conditional_statements::is_valid_triangle();
 }

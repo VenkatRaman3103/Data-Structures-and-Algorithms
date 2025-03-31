@@ -137,7 +137,19 @@ pub fn grade_calculator() {
     }
 }
 
-// TODO: Check if three given sides form a valid triangle
+// COMPLETE: Check if three given sides form a valid triangle
+pub fn is_valid_triangle() {
+    let side_1: i32 = get_user_input().parse().expect("error in getting side_1");
+    let side_2: i32 = get_user_input().parse().expect("error in getting side_2");
+    let side_3: i32 = get_user_input().parse().expect("error in getting side_3");
+
+    if side_1 + side_2 > side_3 && side_1 + side_3 > side_2 && side_3 + side_2 > side_1 {
+        println!("Valid triangle")
+    } else {
+        println!("Invalid triangle")
+    }
+}
+
 // TODO: Identify if a character is a vowel, consonant, digit, or special character
 // TODO: Build a simple calculator (+, -, *, /)
 
