@@ -172,6 +172,7 @@ pub fn indentify_character() {
 }
 
 // COMPLETE: Build a simple calculator (+, -, *, /)
+#[allow(dead_code)]
 pub fn simple_calculator() {
     let num_1: i32 = get_user_input()
         .parse()
@@ -200,7 +201,31 @@ pub fn simple_calculator() {
 
 // NOTE: Advanced Level
 
-// TODO: Find the largest of three numbers
+// COMPLETE: Find the largest of three numbers
+pub fn find_largest_of_three() {
+    let num_1: i32 = get_user_input()
+        .parse()
+        .expect("error in getting user input");
+    let num_2: i32 = get_user_input()
+        .parse()
+        .expect("error in getting user input");
+    let num_3: i32 = get_user_input()
+        .parse()
+        .expect("error in getting user input");
+
+    let arr: [i32; 3] = [num_1, num_2, num_3];
+
+    let mut largest = arr[0];
+
+    for i in arr {
+        if i > largest {
+            largest = i;
+        }
+    }
+
+    println!("{largest}")
+}
+
 // TODO: Implement a profit or loss calculator
 // TODO: Write an electricity bill calculator with tiered pricing
 // TODO: Determine the type of triangle (Equilateral, Isosceles, Scalene)

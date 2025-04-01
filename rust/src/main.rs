@@ -11,5 +11,6 @@ fn main() {
     // ch0_0_basics::ch0_2_conditional_statements::grade_calculator();
     // ch0_0_basics::ch0_2_conditional_statements::is_valid_triangle();
     // ch0_0_basics::ch0_2_conditional_statements::indentify_character();
-    ch0_0_basics::ch0_2_conditional_statements::simple_calculator();
+    // ch0_0_basics::ch0_2_conditional_statements::simple_calculator();
+    ch0_0_basics::ch0_2_conditional_statements::find_largest_of_three();
 }
