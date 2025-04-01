@@ -1,4 +1,3 @@
-use core::num;
 use std::{any::type_name, io};
 
 #[allow(dead_code)]
@@ -202,6 +201,7 @@ pub fn simple_calculator() {
 // NOTE: Advanced Level
 
 // COMPLETE: Find the largest of three numbers
+#[allow(dead_code)]
 pub fn find_largest_of_three() {
     let num_1: i32 = get_user_input()
         .parse()
@@ -226,7 +226,25 @@ pub fn find_largest_of_three() {
     println!("{largest}")
 }
 
-// TODO: Implement a profit or loss calculator
+// COMPLETE: Implement a profit or loss calculator
+pub fn profit_loss_calculator() {
+    println!("Investmenet");
+    let investment: i32 = get_user_input()
+        .parse()
+        .expect("error in getting user input");
+
+    println!("Earned");
+    let earned: i32 = get_user_input()
+        .parse()
+        .expect("error in getting user input");
+
+    match earned {
+        earned if earned > investment => println!("+ {}", earned - investment),
+        earned if earned < investment => println!("- {}", investment - earned),
+        _ => println!("no gain"),
+    }
+}
+
 // TODO: Write an electricity bill calculator with tiered pricing
 // TODO: Determine the type of triangle (Equilateral, Isosceles, Scalene)
 // TODO: Map numbers 1-7 to corresponding days of the week
