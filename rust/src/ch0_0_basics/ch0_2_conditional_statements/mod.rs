@@ -1,3 +1,4 @@
+use core::num;
 use std::{any::type_name, io};
 
 #[allow(dead_code)]
@@ -152,6 +153,7 @@ pub fn is_valid_triangle() {
 }
 
 // COMPLETE: Identify if a character is a vowel, consonant, digit, or special character
+#[allow(dead_code)]
 pub fn indentify_character() {
     let vowels = ["a", "u", "i", "o", "e"];
     let special_character = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")"];
@@ -169,7 +171,32 @@ pub fn indentify_character() {
     }
 }
 
-// TODO: Build a simple calculator (+, -, *, /)
+// COMPLETE: Build a simple calculator (+, -, *, /)
+pub fn simple_calculator() {
+    let num_1: i32 = get_user_input()
+        .parse()
+        .expect("error in getting user input");
+
+    let num_2: i32 = get_user_input()
+        .parse()
+        .expect("error in getting user input");
+
+    println!("\n-add,\n-sub,\n-mul,\n-div");
+
+    let operation = get_user_input();
+
+    if operation == "add" {
+        println!("{}", num_1 + num_2)
+    } else if operation == "sub" {
+        println!("{}", num_1 - num_2)
+    } else if operation == "mul" {
+        println!("{}", num_1 * num_2)
+    } else if operation == "div" {
+        println!("{}", num_1 / num_2)
+    } else {
+        println!("Invalid operation")
+    }
+}
 
 // NOTE: Advanced Level
 
