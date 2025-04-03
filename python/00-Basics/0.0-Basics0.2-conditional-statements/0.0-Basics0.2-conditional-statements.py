@@ -51,7 +51,25 @@ def is_leap_year(year):
     else:
         print(year, "is not a leap year")
 
-# TODO: Create a grade calculator (A, B, C, D, F based on marks)
+# COMPLETE: Create a grade calculator (A, B, C, D, F based on marks)
+def grade_calculator(mark):
+    if(mark >= 90 and mark <= 100):
+        print("A")
+    elif (mark >= 80 and mark <= 90):
+        print("B")
+    elif (mark >= 70 and mark <= 80):
+        print("C")
+    elif (mark >= 60 and mark <= 70):
+        print("D")
+    elif (mark >= 50 and mark <= 60):
+        print("E")
+    elif (mark >= 40 and mark <= 50):
+        print("F")
+    elif (mark >=0 and mark<= 39):
+        print("E")
+    else:
+        print("invalid mark")
+
 # TODO: Check if three given sides form a valid triangle
 # TODO: Identify if a character is a vowel, consonant, digit, or special character
 # TODO: Build a simple calculator (+, -, *, /)
@@ -71,4 +89,5 @@ if __name__ == "__main__":
     # voting_eligibilty(userInput)
     # greatest_number(userInput)
     # is_number_divisible_5_or_11(userInput)
-    is_leap_year(userInput)
+    # is_leap_year(userInput)
+    grade_calculator(userInput)
