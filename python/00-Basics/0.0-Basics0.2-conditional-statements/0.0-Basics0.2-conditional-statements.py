@@ -44,7 +44,13 @@ def is_number_divisible_5_or_11(num):
         print(num, "is neither divisible by 11 nor by 5")
 
 # NOTE: Intermediate Level
-# TODO: Implement a leap year checker
+# COMPLETE: Implement a leap year checker
+def is_leap_year(year):
+    if (year % 4 == 0):
+        print(year, "is a leap year")
+    else:
+        print(year, "is not a leap year")
+
 # TODO: Create a grade calculator (A, B, C, D, F based on marks)
 # TODO: Check if three given sides form a valid triangle
 # TODO: Identify if a character is a vowel, consonant, digit, or special character
@@ -64,4 +70,5 @@ if __name__ == "__main__":
     # check_sign(userInput)
     # voting_eligibilty(userInput)
     # greatest_number(userInput)
-    is_number_divisible_5_or_11(userInput)
+    # is_number_divisible_5_or_11(userInput)
+    is_leap_year(userInput)
