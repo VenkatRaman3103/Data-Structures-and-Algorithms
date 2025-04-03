@@ -80,7 +80,25 @@ def is_valid_triangle(side1):
     else:
         print("invalid triangle")
 
-# TODO: Identify if a character is a vowel, consonant, digit, or special character
+# COMPLETE: Identify if a character is a vowel, consonant, digit, or special character
+def identify_character():
+    user_input = input()
+
+    vowels = ["a", "e", "i", "o", "u"]
+    special_char = ["!", "@", "#", "$", "%", "^", "&", "*"]
+
+    try:
+        get_int = int(user_input)
+        print(get_int, "is a number")
+    except :
+        if (user_input in vowels):
+            print(user_input, "is vowel")
+        elif (user_input in special_char):
+            print(user_input, "is special character")
+        else:
+            print(user_input, "is consonant")
+        
+
 # TODO: Build a simple calculator (+, -, *, /)
 #
 # NOTE: Advanced Level
@@ -91,7 +109,7 @@ def is_valid_triangle(side1):
 # TODO: Map numbers 1-7 to corresponding days of the week
 
 if __name__ == "__main__":
-    userInput = int(input())
+    userInput = input()
 
     # isEven(userInput)
     # check_sign(userInput)
@@ -101,3 +119,5 @@ if __name__ == "__main__":
     # is_leap_year(userInput)
     # grade_calculator(userInput)
     # is_valid_triangle(userInput)
+    identify_character()
+
