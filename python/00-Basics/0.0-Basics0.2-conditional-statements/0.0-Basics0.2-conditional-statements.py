@@ -70,7 +70,16 @@ def grade_calculator(mark):
     else:
         print("invalid mark")
 
-# TODO: Check if three given sides form a valid triangle
+# COMPLETE: Check if three given sides form a valid triangle
+def is_valid_triangle(side1):
+    side2 = int(input())
+    side3 = int(input())
+
+    if (side1 + side2 > side3 or side3 + side2 > side1 or side3 + side1 > side2):
+        print("valid triangle")
+    else:
+        print("invalid triangle")
+
 # TODO: Identify if a character is a vowel, consonant, digit, or special character
 # TODO: Build a simple calculator (+, -, *, /)
 #
@@ -90,4 +99,5 @@ if __name__ == "__main__":
     # greatest_number(userInput)
     # is_number_divisible_5_or_11(userInput)
     # is_leap_year(userInput)
-    grade_calculator(userInput)
+    # grade_calculator(userInput)
+    # is_valid_triangle(userInput)
