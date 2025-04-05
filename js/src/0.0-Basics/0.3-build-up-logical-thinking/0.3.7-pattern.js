@@ -1,4 +1,4 @@
-function pattern_7() {
+function pattern_8() {
     let row = 5;
     let column = 5;
 
@@ -14,4 +14,4 @@ function pattern_7() {
     }
 }
 
-pattern_7();
+pattern_8();
