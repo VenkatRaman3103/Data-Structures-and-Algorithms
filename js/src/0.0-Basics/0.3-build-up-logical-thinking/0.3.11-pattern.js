@@ -1,6 +1,7 @@
 function log(val) {
     process.stdout.write(String(val));
 }
+//
 
 function pattern_11() {
     //
