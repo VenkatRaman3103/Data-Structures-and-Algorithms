@@ -100,7 +100,23 @@ def identify_character():
         
 
 # TODO: Build a simple calculator (+, -, *, /)
-#
+def simple_calculator(num1):
+    num2 = int(input())
+
+    operation = input("\nadd\nsub\nmul\ndiv\n")
+
+    if operation == "add":
+        print(num1 + num2)
+    elif operation == "sub":
+        print(num1 - num2)
+    elif operation == "mul":
+        print(num1 * num2)
+    elif operation == "div":
+        print(num1 / num2)
+    else:
+        print("invalid operation")
+
+
 # NOTE: Advanced Level
 # TODO: Find the largest of three numbers
 # TODO: Implement a profit or loss calculator
@@ -109,7 +125,7 @@ def identify_character():
 # TODO: Map numbers 1-7 to corresponding days of the week
 
 if __name__ == "__main__":
-    userInput = input()
+    userInput = int(input())
 
     # isEven(userInput)
     # check_sign(userInput)
@@ -119,5 +135,6 @@ if __name__ == "__main__":
     # is_leap_year(userInput)
     # grade_calculator(userInput)
     # is_valid_triangle(userInput)
-    identify_character()
+    # identify_character()
+    simple_calculator(userInput)
 

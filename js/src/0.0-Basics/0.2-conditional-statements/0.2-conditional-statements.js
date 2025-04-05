@@ -192,8 +192,37 @@ function simpleCalculator(num1, num2) {
 // simpleCalculator(Number(getUserInput()), Number(getUserInput()));
 
 // NOTE: Advanced Level
-// TODO: Find the largest of three numbers
-// TODO: Implement a profit or loss calculator
+// COMPLETE: Find the largest of three numbers
+function largestOfThree(arr) {
+    let largest = arr[0];
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > largest) {
+            largest = arr[i];
+        }
+    }
+
+    console.log(largest);
+}
+
+// largestOfThree([getUserInput(), getUserInput(), getUserInput()]);
+
+// COMPLETE: Implement a profit or loss calculator
+function profitAndLossCalculator(investment, earning) {
+    investment = Number(investment);
+    earning = Number(earning);
+
+    if (earning > investment) {
+        console.log('Profit: ' + (earning - investment));
+    } else if (investment > earning) {
+        console.log('Loss: ' + (investment - earning));
+    } else {
+        console.log('No Profit No Loss');
+    }
+}
+
+// profitAndLossCalculator(getUserInput(), getUserInput());
+
 // TODO: Write an electricity bill calculator with tiered pricing
 // TODO: Determine the type of triangle (Equilateral, Isosceles, Scalene)
 // TODO: Map numbers 1-7 to corresponding days of the week
