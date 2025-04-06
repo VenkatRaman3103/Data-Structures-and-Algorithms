@@ -8,8 +8,8 @@ function pattern_19() {
     let row = 5;
     let column = 10;
 
-    for (let y = 0; y < row; y++) {
-        for (let x = 1; x < column + 1; x++) {
+    for (let y = row - 1; y >= 0; y--) {
+        for (let x = column; x >= 0; x--) {
             if (x <= column / 2) {
                 if (x > y) {
                     log(chars[x - 1]);
@@ -27,7 +27,7 @@ function pattern_19() {
             }
         }
 
-        console.log();
+        console.log(y);
     }
 }
 
