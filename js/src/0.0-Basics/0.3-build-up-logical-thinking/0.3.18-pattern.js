@@ -2,7 +2,7 @@ function log(val) {
     process.stdout.write(String(val));
 }
 
-function pattern_19() {
+function pattern_18() {
     let chars = ['a', 'b', 'c', 'd', 'e'];
 
     let row = 5;
@@ -31,4 +31,4 @@ function pattern_19() {
     }
 }
 
-pattern_19();
+pattern_18();
