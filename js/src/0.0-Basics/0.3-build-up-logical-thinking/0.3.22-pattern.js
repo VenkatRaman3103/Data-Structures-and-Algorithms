@@ -33,6 +33,7 @@ function pattern_22() {
         counter = 1;
         console.log();
     }
+    // return 0;
 }
 
 pattern_22();
