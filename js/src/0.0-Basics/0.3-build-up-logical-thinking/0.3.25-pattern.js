@@ -40,7 +40,7 @@ function pattern_25() {
             }
         }
 
-        console.log(' ', y);
+        console.log();
     }
 
     console.log();
