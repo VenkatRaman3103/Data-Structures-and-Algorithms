@@ -11,3 +11,4 @@ function countDigits(num) {
 
 console.clear();
 countDigits(123456789);
+//
