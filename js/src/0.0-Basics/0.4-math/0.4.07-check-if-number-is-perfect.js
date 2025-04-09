@@ -13,13 +13,13 @@ function findDivisor(num) {
 function isPerfectNumber(num) {
     let divisors = findDivisor(num);
 
-    let accumalator = 0;
+    let accumulator = 0;
 
     for (let element of divisors) {
-        accumalator = accumalator + element;
+        accumulator = accumulator + element;
     }
 
-    console.log(num == accumalator);
+    console.log(num == accumulator);
 }
 
 console.clear();

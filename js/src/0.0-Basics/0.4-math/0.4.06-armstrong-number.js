@@ -14,15 +14,15 @@ function isArmstrongNumber(num) {
 
     let power = countDigits(num);
 
-    let accumalator = 0;
+    let accumulator = 0;
 
     while (num > 0) {
         let lastNumber = num % 10;
-        accumalator = accumalator + lastNumber ** power;
+        accumulator = accumulator + lastNumber ** power;
         num = Math.floor(num / 10);
     }
 
-    console.log(accumalator == givenNumber);
+    console.log(accumulator == givenNumber);
 }
 
 console.clear();

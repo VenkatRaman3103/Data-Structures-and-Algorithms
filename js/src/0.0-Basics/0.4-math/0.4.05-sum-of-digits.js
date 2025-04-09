@@ -1,13 +1,13 @@
 function countDigits(num) {
-    let accumalator = 0;
+    let accumulator = 0;
 
     while (num > 0) {
         let lastNumber = num % 10;
-        accumalator = accumalator + lastNumber;
+        accumulator = accumulator + lastNumber;
         num = Math.floor(num / 10);
     }
 
-    console.log(accumalator);
+    console.log(accumulator);
 }
 
 console.clear();
