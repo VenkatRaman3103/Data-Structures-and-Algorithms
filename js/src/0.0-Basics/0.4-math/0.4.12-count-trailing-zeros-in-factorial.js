@@ -1,11 +1,12 @@
-function factorialOfNumber(num) {
+function factorialOfNum(num) {
     let accumulator = 1;
 
-    for (let i = 1; i < num; i++) {
+    for (let i = 1; i <= num; i++) {
         accumulator = accumulator * i;
     }
 
-    console.log(accumulator);
+    return accumulator;
 }
 
-factorialOfNumber(5);
+console.clear();
+factorialOfNum(5);
