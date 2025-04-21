@@ -11,4 +11,5 @@ function pattern_6() {
     }
 }
 
+console.clear();
 pattern_6();
