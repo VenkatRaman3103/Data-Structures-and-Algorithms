@@ -14,4 +14,5 @@ function pattern_8() {
     }
 }
 
+console.clear();
 pattern_8();
