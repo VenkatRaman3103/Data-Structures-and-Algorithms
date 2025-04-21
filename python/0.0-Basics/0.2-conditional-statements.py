@@ -1,3 +1,8 @@
+import os
+
+def clear():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
 # NOTE: Basic Level
 # COMPLETE: Write a program to check if a number is even or odd
 def is_even(num):
@@ -118,23 +123,45 @@ def simple_calculator(num1):
 
 
 # NOTE: Advanced Level
-# TODO: Find the largest of three numbers
-# TODO: Implement a profit or loss calculator
+# COMPLETE: Find the largest of three numbers
+def findLargesOfThree(num1, num2, num3):
+    numList = [num1, num2, num3]
+
+    largest = numList[0]
+
+    for n in numList:
+        if largest < n:
+            largest = n
+
+    return largest
+
+
+# COMPLETE: Implement a profit or loss calculator
+def profitAndLoss(investment, earned):
+    if investment > earned:
+        print(f"loss is {investment - earned}")
+    elif earned >investment :
+        print(f"earned is { earned - investment}")
+
+
+clear()
+profitAndLoss(10, 60)
+
 # TODO: Write an electricity bill calculator with tiered pricing
 # TODO: Determine the type of triangle (Equilateral, Isosceles, Scalene)
 # TODO: Map numbers 1-7 to corresponding days of the week
 
-if __name__ == "__main__":
-    userInput = int(input())
-
-    # isEven(userInput)
-    # check_sign(userInput)
-    # voting_eligibilty(userInput)
-    # greatest_number(userInput)
-    # is_number_divisible_5_or_11(userInput)
-    # is_leap_year(userInput)
-    # grade_calculator(userInput)
-    # is_valid_triangle(userInput)
-    # identify_character()
-    simple_calculator(userInput)
-
+# if __name__ == "__main__":
+#     userInput = int(input())
+#
+#     # isEven(userInput)
+#     # check_sign(userInput)
+#     # voting_eligibilty(userInput)
+#     # greatest_number(userInput)
+#     # is_number_divisible_5_or_11(userInput)
+#     # is_leap_year(userInput)
+#     # grade_calculator(userInput)
+#     # is_valid_triangle(userInput)
+#     # identify_character()
+#     # simple_calculator(userInput)
+#     # findLargesOfThree(1, 2, 3)
