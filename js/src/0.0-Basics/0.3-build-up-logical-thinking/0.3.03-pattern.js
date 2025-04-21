@@ -11,4 +11,5 @@ function patter_3() {
     }
 }
 
+console.clear();
 patter_3();
