@@ -10,4 +10,5 @@ function pattern_1() {
     }
 }
 
+console.timeLog();
 pattern_1();
