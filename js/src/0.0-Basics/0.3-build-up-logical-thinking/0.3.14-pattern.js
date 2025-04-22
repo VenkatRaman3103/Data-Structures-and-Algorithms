@@ -17,4 +17,5 @@ function patter_14() {
     }
 }
 
+console.clear();
 patter_14();

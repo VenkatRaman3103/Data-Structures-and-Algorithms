@@ -28,4 +28,5 @@ function patter_9() {
     }
 }
 
+console.clear();
 patter_9();

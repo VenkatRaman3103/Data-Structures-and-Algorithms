@@ -31,4 +31,5 @@ function pattern_18() {
     }
 }
 
+console.clear();
 pattern_18();

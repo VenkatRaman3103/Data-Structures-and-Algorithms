@@ -32,4 +32,5 @@ function pattern_20() {
     }
 }
 
+console.clear();
 pattern_20();

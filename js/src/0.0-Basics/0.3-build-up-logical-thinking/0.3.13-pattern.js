@@ -29,4 +29,5 @@ function patter_13() {
     }
 }
 
+console.clear();
 patter_13();

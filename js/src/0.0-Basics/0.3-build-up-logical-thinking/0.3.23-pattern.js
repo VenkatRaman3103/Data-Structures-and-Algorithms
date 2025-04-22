@@ -27,4 +27,5 @@ function pattern_23() {
     return 0;
 }
 
+console.clear();
 pattern_23();

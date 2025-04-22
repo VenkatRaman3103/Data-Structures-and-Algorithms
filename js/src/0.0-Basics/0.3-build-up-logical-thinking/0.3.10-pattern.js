@@ -44,4 +44,5 @@ function patter_10() {
     }
 }
 
+console.clear();
 patter_10();

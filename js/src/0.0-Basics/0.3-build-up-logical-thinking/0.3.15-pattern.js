@@ -22,4 +22,5 @@ function pattern_15() {
     }
 }
 
+console.clear();
 pattern_15();

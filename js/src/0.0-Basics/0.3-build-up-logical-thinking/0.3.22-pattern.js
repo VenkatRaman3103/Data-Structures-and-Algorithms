@@ -36,4 +36,5 @@ function pattern_22() {
     // return 0;
 }
 
+console.clear();
 pattern_22();

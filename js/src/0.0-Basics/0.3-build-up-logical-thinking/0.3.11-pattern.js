@@ -27,4 +27,5 @@ function pattern_11() {
     }
 }
 
+console.clear();
 pattern_11();

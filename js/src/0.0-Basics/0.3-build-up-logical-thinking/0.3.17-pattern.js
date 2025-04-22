@@ -21,4 +21,5 @@ function pattern_17() {
     }
 }
 
+console.clear();
 pattern_17();

@@ -47,4 +47,5 @@ function pattern_24() {
     return 0;
 }
 
+console.clear();
 pattern_24();
