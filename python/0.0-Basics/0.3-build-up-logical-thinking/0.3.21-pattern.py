@@ -1,6 +1,6 @@
 from utils.clear import clear
 
-def pattern_20():
+def pattern_21():
     row = 5
     column = 5
 
@@ -18,4 +18,4 @@ def pattern_20():
         print()
 
 clear()
-pattern_20()
+pattern_21()
