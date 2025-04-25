@@ -1,5 +1,6 @@
-pub mod ch0_0_input_ouput;
+pub mod ch0_1_input_ouput;
 pub mod ch0_2_conditional_statements;
+pub mod ch0_3_patterns;
 
 // use std::io;
 

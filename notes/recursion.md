@@ -1,4 +1,4 @@
-# Recursive Pattern Printing Problems
+# Recursive
 
 ## 🟢 Easy (1-15)
 

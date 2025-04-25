@@ -227,6 +227,7 @@ pub fn find_largest_of_three() {
 }
 
 // COMPLETE: Implement a profit or loss calculator
+#[allow(dead_code)]
 pub fn profit_loss_calculator() {
     println!("Investmenet");
     let investment: i32 = get_user_input()

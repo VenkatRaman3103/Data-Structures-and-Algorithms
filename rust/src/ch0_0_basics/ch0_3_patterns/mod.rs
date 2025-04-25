@@ -1,0 +1,10 @@
+pub mod pattern_01;
+pub mod pattern_02;
+pub mod pattern_03;
+pub mod pattern_04;
+pub mod pattern_05;
+pub mod pattern_06;
+pub mod pattern_07;
+pub mod pattern_08;
+pub mod pattern_09;
+pub mod pattern_10;
