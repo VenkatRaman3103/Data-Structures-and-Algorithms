@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn pattern_11() {
     let row: i32 = 10;
     let colums: i32 = 5;

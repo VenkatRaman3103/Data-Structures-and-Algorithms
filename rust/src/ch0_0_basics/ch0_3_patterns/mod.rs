@@ -9,3 +9,4 @@ pub mod pattern_08;
 pub mod pattern_09;
 pub mod pattern_10;
 pub mod pattern_11;
+pub mod pattern_12;
