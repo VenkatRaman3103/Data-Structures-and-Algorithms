@@ -1,5 +1,6 @@
 use std::cmp::Ordering;
 
+#[allow(dead_code)]
 pub fn pattern_10() {
     let row: i32 = 10;
     let column: i32 = 10;
