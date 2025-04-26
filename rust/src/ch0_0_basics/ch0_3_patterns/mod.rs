@@ -13,3 +13,5 @@ pub mod pattern_12;
 pub mod pattern_13;
 pub mod pattern_14;
 pub mod pattern_15;
+pub mod pattern_16;
+pub mod pattern_17;

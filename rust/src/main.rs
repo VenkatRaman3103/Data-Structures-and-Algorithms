@@ -33,5 +33,7 @@ fn main() {
     // ch0_0_basics::ch0_3_patterns::pattern_12::pattern_12()
     // ch0_0_basics::ch0_3_patterns::pattern_13::pattern_13()
     // ch0_0_basics::ch0_3_patterns::pattern_14::pattern_14()
-    ch0_0_basics::ch0_3_patterns::pattern_15::pattern_15()
+    // ch0_0_basics::ch0_3_patterns::pattern_15::pattern_15()
+    // ch0_0_basics::ch0_3_patterns::pattern_16::pattern_16()
+    ch0_0_basics::ch0_3_patterns::pattern_17::pattern_17()
 }
