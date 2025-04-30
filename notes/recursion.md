@@ -31,6 +31,11 @@
 8
 ```
 
+**Links:**
+
+- LeetCode: [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) - Similar recursive structure
+- HackerRank: [Recursion: Fibonacci Numbers](https://www.hackerrank.com/challenges/ctci-fibonacci-numbers/problem) - Basic recursion concept
+
 ### 2. Print numbers from N to 1
 
 **Problem**: Write a recursive function to print all numbers from N down to 1.
@@ -59,6 +64,11 @@
 1
 ```
 
+**Links:**
+
+- LeetCode: [344. Reverse String](https://leetcode.com/problems/reverse-string/) - Similar reversal concept
+- CodeChef: [RECNDSTR](https://www.codechef.com/problems/RECNDSTR) - Related to reversal patterns
+
 ### 3. Print a triangle of stars (left-aligned)
 
 **Problem**: Using recursion, print a left-aligned triangle of stars with N rows.
@@ -85,6 +95,12 @@
 ******
 ```
 
+**Links:**
+
+- LeetCode: [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) - Similar pattern building approach
+- HackerRank: [Staircase](https://www.hackerrank.com/challenges/staircase/problem) - Similar pattern problem
+- CodeChef: [TRICOIN](https://www.codechef.com/problems/TRICOIN) - Related triangle pattern concept
+
 ### 4. Reverse a triangle of stars
 
 **Problem**: Using recursion, print a left-aligned triangle of stars in reverse order.
@@ -109,6 +125,11 @@
 **
 *
 ```
+
+**Links:**
+
+- HackerRank: [Print the Pattern](https://www.hackerrank.com/contests/macroscope-2017/challenges/print-the-pattern) - Related patterns
+- CodeChef: [PPATTERN](https://www.codechef.com/problems/PPATTERN) - Pattern printing problem
 
 ### 5. Triangle of numbers (1 to i)
 
@@ -136,6 +157,12 @@
 1 2 3 4 5 6
 ```
 
+**Links:**
+
+- LeetCode: [1441. Build an Array With Stack Operations](https://leetcode.com/problems/build-an-array-with-stack-operations/) - For sequential number concepts
+- CodeChef: [PRPATTERN](https://www.codechef.com/problems/PRPATTERN) - Related to number patterns
+- HackerRank: [Print the Pattern](https://www.hackerrank.com/contests/macroscope-2017/challenges/print-the-pattern)
+
 ### 6. Reverse triangle of numbers
 
 **Problem**: Using recursion, print a left-aligned triangle of numbers in reverse order.
@@ -161,6 +188,11 @@
 1
 ```
 
+**Links:**
+
+- LeetCode: [119. Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) - Related to row-by-row pattern generation
+- HackerRank: [Triangle Numbers](https://www.hackerrank.com/challenges/triangle-numbers/problem) - Similar number pattern
+
 ### 7. Right-aligned triangle of stars
 
 **Problem**: Using recursion, print a right-aligned triangle of stars with N rows.
@@ -185,6 +217,11 @@
  ****
 *****
 ```
+
+**Links:**
+
+- HackerRank: [Staircase](https://www.hackerrank.com/challenges/staircase/problem) - Similar alignment challenge
+- CodeChef: [DIFTRIANG](https://www.codechef.com/problems/DIFTRIANG) - Triangle pattern problems
 
 ### 8. Sum of first N numbers using recursion
 
@@ -218,6 +255,12 @@ Calculating sum(7)
 Sum of first 7 numbers: 28
 ```
 
+**Links:**
+
+- LeetCode: [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) - Similar recursive summation concept
+- HackerRank: [Recursive Digit Sum](https://www.hackerrank.com/challenges/recursive-digit-sum/problem) - Advanced recursive sum concept
+- CodeChef: [SUMTRIAN](https://www.codechef.com/problems/SUMTRIAN) - Sum-related problem
+
 ### 9. Fibonacci pattern
 
 **Problem**: Using recursion, print the first N Fibonacci numbers.
@@ -235,6 +278,12 @@ Sum of first 7 numbers: 28
 ```
 0 1 1 2 3 5 8 13 21 34
 ```
+
+**Links:**
+
+- LeetCode: [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) - Direct Fibonacci implementation
+- LeetCode: [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) - Fibonacci application
+- HackerRank: [Fibonacci Modified](https://www.hackerrank.com/challenges/fibonacci-modified/problem) - Advanced Fibonacci variation
 
 ### 10. Count digits of a number using recursion
 
@@ -254,6 +303,11 @@ Number of digits in 12345 is 5
 Number of digits in 9876543210 is 10
 ```
 
+**Links:**
+
+- LeetCode: [258. Add Digits](https://leetcode.com/problems/add-digits/) - Related digit manipulation
+- HackerRank: [Recursive Digit Sum](https://www.hackerrank.com/challenges/recursive-digit-sum/problem) - Working with digits recursively
+
 ### 11. Print binary representation of a number
 
 **Problem**: Using recursion, print the binary representation of a given decimal number.
@@ -271,6 +325,12 @@ Binary representation of 10 is 1010
 ```
 Binary representation of 25 is 11001
 ```
+
+**Links:**
+
+- LeetCode: [1009. Complement of Base 10 Integer](https://leetcode.com/problems/complement-of-base-10-integer/) - Binary representation manipulation
+- LeetCode: [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/) - Related bit manipulation
+- HackerRank: [Binary Numbers](https://www.hackerrank.com/challenges/30-binary-numbers/problem) - Binary representation task
 
 ### 12. Print a rectangle pattern of N x M using recursion
 
@@ -294,6 +354,11 @@ Binary representation of 25 is 11001
 ******
 ******
 ```
+
+**Links:**
+
+- LeetCode: [1351. Count Negative Numbers in a Sorted Matrix](https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/) - Matrix traversal concept
+- HackerRank: [Print the Pattern](https://www.hackerrank.com/contests/printing-pattern-again/challenges/printing-pattern-again) - Pattern printing
 
 ### 13. Print all permutations of a string
 
@@ -325,6 +390,12 @@ ADCB
 (24 permutations total)
 ```
 
+**Links:**
+
+- LeetCode: [46. Permutations](https://leetcode.com/problems/permutations/) - Direct implementation of permutations
+- LeetCode: [47. Permutations II](https://leetcode.com/problems/permutations-ii/) - Permutations with duplicates
+- HackerRank: [Recursive Digit Sum](https://www.hackerrank.com/challenges/recursive-digit-sum/problem) - Recursive problem
+
 ### 14. Reverse a string using recursion
 
 **Problem**: Write a recursive function to reverse a string.
@@ -344,6 +415,12 @@ Reversed: olleh
 Original: recursion
 Reversed: noisrucer
 ```
+
+**Links:**
+
+- LeetCode: [344. Reverse String](https://leetcode.com/problems/reverse-string/) - Direct string reversal implementation
+- HackerRank: [Recursion: Davis' Staircase](https://www.hackerrank.com/challenges/ctci-recursive-staircase/problem) - Different recursive approach
+- CodeChef: [RECNDSTR](https://www.codechef.com/problems/RECNDSTR) - String manipulation
 
 ### 15. Print all subsets (power set) of a string
 
@@ -385,6 +462,12 @@ Reversed: noisrucer
 "abcd"
 ```
 
+**Links:**
+
+- LeetCode: [78. Subsets](https://leetcode.com/problems/subsets/) - Direct implementation of subset generation
+- LeetCode: [90. Subsets II](https://leetcode.com/problems/subsets-ii/) - Subsets with duplicates
+- HackerRank: [Super Reduced String](https://www.hackerrank.com/challenges/reduced-string/problem) - String manipulation problem
+
 ## 🟡 Moderate (16-35)
 
 ### 16. Print pyramid of stars (center aligned)
@@ -411,6 +494,11 @@ Reversed: noisrucer
  *******
 *********
 ```
+
+**Links:**
+
+- HackerRank: [Staircase](https://www.hackerrank.com/challenges/staircase/problem) - Similar pattern problem
+- CodeChef: [PPATTERN](https://www.codechef.com/problems/PPATTERN) - Pattern printing
 
 ### 17. Diamond pattern of stars
 
@@ -440,6 +528,11 @@ Reversed: noisrucer
    *
 ```
 
+**Links:**
+
+- LeetCode: [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) - Similar expanding-contracting pattern
+- HackerRank: [Print the Pattern](https://www.hackerrank.com/contests/macroscope-2017/challenges/print-the-pattern) - Complex pattern problems
+
 ### 18. Number pyramid (center aligned)
 
 **Problem**: Using recursion, print a pyramid of numbers that is center-aligned.
@@ -465,6 +558,11 @@ Reversed: noisrucer
 567898765
 ```
 
+**Links:**
+
+- LeetCode: [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) - Similar structured pattern
+- CodeChef: [PAT1](https://www.codechef.com/problems/PAT1) - Pattern printing problem
+
 ### 19. Floyd's triangle
 
 **Problem**: Using recursion, print Floyd's triangle up to N rows.
@@ -489,6 +587,11 @@ Reversed: noisrucer
 4 5 6
 7 8 9 10
 ```
+
+**Links:**
+
+- HackerRank: [Print the Pattern](https://www.hackerrank.com/contests/macroscope-2017/challenges/print-the-pattern) - Includes various pattern problems
+- CodeChef: [PPATTERN](https://www.codechef.com/problems/PPATTERN) - Pattern with incremental numbering
 
 ### 20. Pascal's triangle using recursion
 
@@ -516,6 +619,12 @@ Reversed: noisrucer
  1 4 6 4 1
 1 5 10 10 5 1
 ```
+
+**Links:**
+
+- LeetCode: [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) - Direct implementation of Pascal's Triangle
+- LeetCode: [119. Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) - Generating specific row
+- HackerRank: [Pascal's Triangle](https://www.hackerrank.com/challenges/pascals-triangle/problem) - Similar implementation
 
 ### 21. Zig-zag number pattern
 
@@ -545,6 +654,11 @@ Reversed: noisrucer
    12
 ```
 
+**Links:**
+
+- LeetCode: [6. Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) - Related zigzag pattern concept
+- CodeChef: [ZIGZAG3](https://www.codechef.com/problems/ZIGZAG3) - Zigzag sequence problem
+
 ### 22. Hollow square
 
 **Problem**: Using recursion, print a hollow square pattern of stars.
@@ -570,6 +684,11 @@ Reversed: noisrucer
 *    *
 ******
 ```
+
+**Links:**
+
+- LeetCode: [498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/) - Traversal pattern concept
+- HackerRank: [Print Pretty](https://www.hackerrank.com/challenges/print-pretty/problem) - Formatting output
 
 ### 23. Hollow triangle
 
@@ -599,6 +718,11 @@ Reversed: noisrucer
 *******
 ```
 
+**Links:**
+
+- HackerRank: [Print the Pattern](https://www.hackerrank.com/contests/macroscope-2017/challenges/print-the-pattern) - Various pattern problems
+- CodeChef: [TRIQUERY](https://www.codechef.com/problems/TRIQUERY) - Triangle based problem
+
 ### 24. Hollow pyramid
 
 **Problem**: Using recursion, print a hollow pyramid pattern.
@@ -623,6 +747,11 @@ Reversed: noisrucer
  *     *
 *********
 ```
+
+**Links:**
+
+- HackerRank: [Staircase](https://www.hackerrank.com/challenges/staircase/problem) - Similar alignment problem
+- CodeChef: [PEPPASTA](https://www.codechef.com/problems/PEPPASTA) - Pattern problem
 
 ### 25. Hourglass star pattern
 
@@ -656,6 +785,11 @@ Reversed: noisrucer
 *******
 ```
 
+**Links:**
+
+- LeetCode: [2373. Largest Local Values in a Matrix](https://leetcode.com/problems/largest-local-values-in-a-matrix/) - Pattern processing
+- HackerRank: [2D Array - DS](https://www.hackerrank.com/challenges/2d-array/problem) - Involves hourglass pattern traversal
+
 ### 26. Mirror number triangle
 
 **Problem**: Using recursion, print a mirror image of a number triangle.
@@ -681,6 +815,11 @@ Reversed: noisrucer
 1234554321
 ```
 
+**Links:**
+
+- LeetCode: [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) - Similar structure building approach
+- CodeChef: [PATRN002](https://www.codechef.com/problems/PATRN002) - Pattern problems
+
 ### 27. Spiral pattern using recursion
 
 **Problem**: Using recursion, print numbers in a spiral pattern.
@@ -703,6 +842,12 @@ Reversed: noisrucer
 11 16 15 6
 10 9  8  7
 ```
+
+**Links:**
+
+- LeetCode: [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) - Direct implementation of spiral traversal
+- LeetCode: [59. Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) - Filling a matrix in spiral order
+- HackerRank: [Print the Pattern](https://www.hackerrank.com/contests/macroscope-2017/challenges/print-the-pattern) - Various pattern problems
 
 ### 28. Print chessboard pattern recursively
 
@@ -728,6 +873,11 @@ Reversed: noisrucer
  * *
 * * *
 ```
+
+**Links:**
+
+- LeetCode: [2128. Remove All Ones With Row and Column Flips](https://leetcode.com/problems/remove-all-ones-with-row-and-column-flips/) - Matrix pattern manipulation
+- CodeChef: [CHESSBOARD](https://www.codechef.com/problems/CHESSBOARD) - Chessboard related problem
 
 ### 29. Alternate 1-0 triangle pattern
 
@@ -756,6 +906,11 @@ Reversed: noisrucer
 010101
 ```
 
+**Links:**
+
+- LeetCode: [442. Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) - Pattern recognition
+- CodeChef: [LAPIN](https://www.codechef.com/problems/LAPIN) - Pattern recognition problem
+
 ### 30. Snake-like pattern of numbers
 
 **Problem**: Using recursion, print numbers in a snake-like pattern.
@@ -778,6 +933,12 @@ Reversed: noisrucer
 6 5 4
 7 8 9
 ```
+
+**Links:**
+
+- LeetCode: [498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/) - Similar zigzag traversal
+- LeetCode: [1424. Diagonal Traverse II](https://leetcode.com/problems/diagonal-traverse-ii/) - Advanced diagonal traversal
+- CodeChef: [SNAKE](https://www.codechef.com/problems/SNAKE) - Snake-like movement
 
 ### 31. Inverted number triangle
 
@@ -804,6 +965,11 @@ Reversed: noisrucer
    4
 ```
 
+**Links:**
+
+- LeetCode: [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) - Similar structure concept
+- HackerRank: [Print the Pattern](https://www.hackerrank.com/contests/macroscope-2017/challenges/print-the-pattern) - Various patterns
+
 ### 32. Left-aligned triangle using backtracking
 
 **Problem**: Using recursive backtracking, print a left-aligned triangle.
@@ -828,6 +994,12 @@ Reversed: noisrucer
 ****
 *****
 ```
+
+**Links:**
+
+- LeetCode: [39. Combination Sum](https://leetcode.com/problems/combination-sum/) - Uses backtracking
+- LeetCode: [46. Permutations](https://leetcode.com/problems/permutations/) - Backtracking application
+- HackerRank: [The Power Sum](https://www.hackerrank.com/challenges/the-power-sum/problem) - Backtracking problem
 
 ### 33. Diagonal pattern using recursion
 
@@ -856,6 +1028,11 @@ Reversed: noisrucer
      *
 ```
 
+**Links:**
+
+- LeetCode: [498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/) - Diagonal traversal concept
+- CodeChef: [DIAGONL](https://www.codechef.com/problems/DIAGONL) - Diagonal pattern problem
+
 ### 34. Binary triangle (rows alternate 0s and 1s)
 
 **Problem**: Using recursion, print a triangle where rows alternate between 0s and 1s.
@@ -883,6 +1060,11 @@ Reversed: noisrucer
 000000
 ```
 
+**Links:**
+
+- LeetCode: [1680. Concatenation of Consecutive Binary Numbers](https://leetcode.com/problems/concatenation-of-consecutive-binary-numbers/) - Binary pattern work
+- HackerRank: [Print the Pattern](https://www.hackerrank.com/contests/macroscope-2017/challenges/print-the-pattern) - Various patterns
+
 ### 35. Spiral matrix filling with numbers using recursion
 
 **Problem**: Using recursion, fill a matrix with numbers in a spiral order.
@@ -905,6 +1087,12 @@ Reversed: noisrucer
 11 16 15 6
 10 9  8  7
 ```
+
+**Links:**
+
+- LeetCode: [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) - Direct implementation of spiral traversal
+- LeetCode: [59. Spiral Matrix II](https://leetcode.com/problems/spiral-matrix-ii/) - Filling a matrix in spiral order
+- CodeChef: [SSEC0004](https://www.codechef.com/problems/SSEC0004) - Matrix traversal problem
 
 ## 🔴 Hard (36-50)
 
@@ -936,6 +1124,11 @@ Reversed: noisrucer
 * * * * * * * *
 ```
 
+**Links:**
+
+- LeetCode: [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) - Similar fractal-like pattern
+- HackerRank: [Fractal Trees](https://www.hackerrank.com/challenges/fractal-trees-all/problem) - Similar fractal pattern
+
 ### 37. Fractal square pattern
 
 **Problem**: Using recursion, print a fractal pattern of squares.
@@ -965,6 +1158,11 @@ Reversed: noisrucer
 *       *
 *********
 ```
+
+**Links:**
+
+- HackerRank: [Fractal Trees](https://www.hackerrank.com/challenges/fractal-trees-all/problem) - Similar fractal concept
+- LeetCode: [463. Island Perimeter](https://leetcode.com/problems/island-perimeter/) - Perimeter concept applicable to fractals
 
 ### 38. Recursive hourglass number pattern
 
@@ -998,6 +1196,11 @@ Reversed: noisrucer
 123454321
 ```
 
+**Links:**
+
+- LeetCode: [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) - Similar pattern construction logic
+- HackerRank: [Printing Pattern](https://www.hackerrank.com/challenges/printing-pattern-2/problem) - Number pattern printing
+
 ### 39. Recursive triangle with alternating stars and numbers
 
 **Problem**: Using recursion, print a triangle with alternating rows of stars and numbers.
@@ -1022,6 +1225,11 @@ Reversed: noisrucer
 1 2 3 4
 * * * * *
 ```
+
+**Links:**
+
+- LeetCode: [119. Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) - Row generation concept
+- HackerRank: [Staircase](https://www.hackerrank.com/challenges/staircase/problem) - Pattern printing technique
 
 ### 40. Print patterns using recursive backtracking (like N-Queens board output)
 
@@ -1051,6 +1259,11 @@ Q . . . . . . .
 . . . Q . . . .
 ```
 
+**Links:**
+
+- LeetCode: [51. N-Queens](https://leetcode.com/problems/n-queens/) - Direct implementation of this problem
+- LeetCode: [52. N-Queens II](https://leetcode.com/problems/n-queens-ii/) - Counting solutions variant
+
 ### 41. Hilbert Curve pattern (representation via recursion)
 
 **Problem**: Using recursion, print a simplified representation of a Hilbert Curve.
@@ -1074,6 +1287,11 @@ Q . . . . . . .
 │ │ │
 └─┴─┘
 ```
+
+**Links:**
+
+- LeetCode: [1041. Robot Bounded In Circle](https://leetcode.com/problems/robot-bounded-in-circle/) - Direction and movement patterns
+- HackerRank: [Tree: Huffman Decoding](https://www.hackerrank.com/challenges/tree-huffman-decoding/problem) - Recursive traversal concept
 
 ### 42. Concentric square pattern with recursion
 
@@ -1102,6 +1320,11 @@ Q . . . . . . .
 *     *
 *******
 ```
+
+**Links:**
+
+- LeetCode: [463. Island Perimeter](https://leetcode.com/problems/island-perimeter/) - Perimeter calculation concept
+- HackerRank: [Matrix Layer Rotation](https://www.hackerrank.com/challenges/matrix-rotation-algo/problem) - Concentric matrix manipulation
 
 ### 43. Recursive triangle wave pattern
 
@@ -1133,6 +1356,11 @@ Q . . . . . . .
  *
 ```
 
+**Links:**
+
+- LeetCode: [498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/) - Similar movement patterns
+- HackerRank: [Recursion: Fibonacci Numbers](https://www.hackerrank.com/challenges/ctci-fibonacci-numbers/problem) - Recursive pattern generation
+
 ### 44. Symmetric pattern of numbers
 
 **Problem**: Using recursion, print a symmetric pattern of numbers.
@@ -1158,6 +1386,11 @@ Q . . . . . . .
 1234554321
 ```
 
+**Links:**
+
+- LeetCode: [5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) - Symmetry concept
+- HackerRank: [Print Pretty](https://www.hackerrank.com/challenges/prettyprint/problem) - Formatting output
+
 ### 45. Recursively generate pyramid of Pascal's triangle with center alignment
 
 **Problem**: Using recursion, print a pyramid pattern of Pascal's triangle.
@@ -1182,6 +1415,12 @@ Q . . . . . . .
  1 3 3 1
 1 4 6 4 1
 ```
+
+**Links:**
+
+- LeetCode: [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) - Direct implementation
+- LeetCode: [119. Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) - Row generation
+- HackerRank: [Divisible Sum Pairs](https://www.hackerrank.com/challenges/divisible-sum-pairs/problem) - Pair calculation concept
 
 ### 46. Box inside box pattern using recursion
 
@@ -1210,6 +1449,11 @@ Q . . . . . . .
 *     *
 *******
 ```
+
+**Links:**
+
+- LeetCode: [733. Flood Fill](https://leetcode.com/problems/flood-fill/) - Region filling concept
+- HackerRank: [Matrix Layer Rotation](https://www.hackerrank.com/challenges/matrix-rotation-algo/problem) - Nested patterns
 
 ### 47. Recursive butterfly pattern
 
@@ -1243,6 +1487,11 @@ Q . . . . . . .
 *       *
 ```
 
+**Links:**
+
+- LeetCode: [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) - Matrix traversal patterns
+- HackerRank: [Print the Elements of a Linked List](https://www.hackerrank.com/challenges/print-the-elements-of-a-linked-list/problem) - Sequential pattern printing
+
 ### 48. Alphabet diamond pattern recursively
 
 **Problem**: Using recursion, print a diamond pattern using alphabets.
@@ -1273,6 +1522,11 @@ E       E
     A
 ```
 
+**Links:**
+
+- LeetCode: [22. Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) - Symmetric pattern generation concept
+- HackerRank: [Alternating Characters](https://www.hackerrank.com/challenges/alternating-characters/problem) - Character pattern manipulation
+
 ### 49. Recursive tree structure pattern
 
 **Problem**: Using recursion, print a pattern that resembles a binary tree.
@@ -1302,6 +1556,12 @@ E       E
 *     * *     *
 ```
 
+**Links:**
+
+- LeetCode: [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) - Tree traversal concept
+- LeetCode: [104. Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) - Tree depth calculation
+- HackerRank: [Binary Search Tree: Lowest Common Ancestor](https://www.hackerrank.com/challenges/binary-search-tree-lowest-common-ancestor/problem) - Tree navigation
+
 ### 50. Recursive mandala-like star/numbers pattern
 
 **Problem**: Using recursion, print a mandala-like pattern with stars and numbers.
@@ -1329,3 +1589,8 @@ E       E
   321
    *
 ```
+
+**Links:**
+
+- LeetCode: [1222. Queens That Can Attack the King](https://leetcode.com/problems/queens-that-can-attack-the-king/) - Directional pattern concept
+- HackerRank: [Recursive Digit Sum](https://www.hackerrank.com/challenges/recursive-digit-sum/problem) - Recursive numerical patterns
