@@ -1,32 +1,45 @@
+function frequency(word) {
+    const letters = word.split('');
+    let hashMap = {};
+
+    for (let i = 0; i < letters.length; i++) {
+        let key = letters[i];
+        if (hashMap[key] == undefined) {
+            hashMap[key] = 1;
+        } else {
+            hashMap[key] += 1;
+        }
+    }
+    return hashMap;
+}
+
 function commonChars(words) {
-    const hashmap = {};
-    const commons = [];
+    const baseHash = frequency(words[0]);
 
     for (let i = 0; i < words.length; i++) {
-        let word = words[i];
-        let letters = word.split('');
+        const currentHash = frequency(words[i]);
+        // console.log(baseHash, currentHash);
 
-        for (let j = 0; j < letters.length; j++) {
-            let letter = letters[j];
-
-            if (hashmap[letter] == undefined) {
-                hashmap[letter] = 1;
+        for (let key in baseHash) {
+            if (baseHash[key]) {
+                baseHash[key] = Math.min(baseHash[key], currentHash[key]);
             } else {
-                hashmap[letter] += 1;
+                delete baseHash[key];
             }
         }
     }
 
-    for (let key of Object.keys(hashmap)) {
-        const n = Math.floor(hashmap[key] / words.length);
+    const result = [];
 
-        for (let i = 0; i < n; i++) {
-            commons.push(key);
+    for (let i in baseHash) {
+        for (let j = 0; j < baseHash[i]; j++) {
+            result.push(i);
         }
     }
-    return commons;
+
+    return result;
 }
 
-const words = ['bella', 'label', 'roller'];
+const words = ['cool', 'lock', 'cook'];
 const result = commonChars(words);
 console.log(result);
