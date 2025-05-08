@@ -18,7 +18,6 @@ function commonChars(words) {
 
     for (let i = 0; i < words.length; i++) {
         const currentHash = frequency(words[i]);
-        // console.log(baseHash, currentHash);
 
         for (let key in baseHash) {
             if (baseHash[key]) {
