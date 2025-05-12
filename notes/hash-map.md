@@ -644,3 +644,13 @@ grid = [
 
 - LeetCode: [1125. Smallest Sufficient Team](https://leetcode.com/problems/smallest-sufficient-team/)
 - GeeksforGeeks: [Minimum number of people to cover all skills](https://www.geeksforgeeks.org/minimum-number-of-people-to-cover-all-skills/)
+
+## notes
+
+https://leetcode.com/problems/contiguous-array/description/
+https://leetcode.com/problems/subarray-sum-equals-k/description/
+https://leetcode.com/problems/subarrays-with-k-different-integers/description/
+https://leetcode.com/problems/count-number-of-nice-subarrays/description/
+https://leetcode.com/problems/binary-subarrays-with-sum/description/
+https://leetcode.com/problems/subarray-product-less-than-k/description/
+https://leetcode.com/problems/count-subarrays-where-max-element-appears-at-least-k-times/description/

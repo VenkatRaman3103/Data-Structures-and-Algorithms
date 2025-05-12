@@ -452,3 +452,99 @@ abcde
 - LeetCode: [1030. Matrix Cells in Distance Order](https://leetcode.com/problems/matrix-cells-in-distance-order/) - Distance-based matrix patterns
 - CodeChef: [DISTPATT](https://www.codechef.com/problems/DISTPATT) - Distance pattern problems
 - HackerRank: [Print Concentric Pattern](https://www.hackerrank.com/contests/smart-interviews/challenges/si-print-concentric-rectangular-pattern)
+
+### 28. Number pyramid (center aligned)
+
+**Problem**: print a pyramid of numbers that is center-aligned.
+
+**Sample Input 1**: `N = 4`  
+**Expected Output 1**:
+
+```
+   1
+  232
+ 34543
+4567654
+```
+
+**Sample Input 2**: `N = 5`  
+**Expected Output 2**:
+
+```
+    1
+   232
+  34543
+ 4567654
+567898765
+```
+
+**Links:**
+
+- LeetCode: [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) - Similar structured pattern
+- CodeChef: [PAT1](https://www.codechef.com/problems/PAT1) - Pattern printing problem
+
+### 29. Pascal's triangle
+
+**Problem**: Using recursion, print Pascal's triangle up to N rows.
+
+**Sample Input 1**: `N = 5`  
+**Expected Output 1**:
+
+```
+    1
+   1 1
+  1 2 1
+ 1 3 3 1
+1 4 6 4 1
+```
+
+**Sample Input 2**: `N = 6`  
+**Expected Output 2**:
+
+```
+     1
+    1 1
+   1 2 1
+  1 3 3 1
+ 1 4 6 4 1
+1 5 10 10 5 1
+```
+
+**Links:**
+
+- LeetCode: [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) - Direct implementation of Pascal's Triangle
+- LeetCode: [119. Pascal's Triangle II](https://leetcode.com/problems/pascals-triangle-ii/) - Generating specific row
+- HackerRank: [Pascal's Triangle](https://www.hackerrank.com/challenges/pascals-triangle/problem) - Similar implementation
+
+### 30. Zig-zag number pattern
+
+**Problem**: print a zig-zag pattern of numbers.
+
+**Sample Input 1**: `N = 3`  
+**Expected Output 1**:
+
+```
+  1
+ 2 3
+4   5
+ 6 7
+  8
+```
+
+**Sample Input 2**: `N = 4`  
+**Expected Output 2**:
+
+```
+   1
+  2 3
+ 4   5
+6     7
+ 8   9
+  10 11
+   12
+```
+
+**Links:**
+
+- LeetCode: [6. Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) - Related zigzag pattern concept
+- CodeChef: [ZIGZAG3](https://www.codechef.com/problems/ZIGZAG3) - Zigzag sequence problem
