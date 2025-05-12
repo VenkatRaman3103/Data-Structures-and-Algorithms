@@ -203,6 +203,7 @@
 **Expected Output 1**: `3` ("abc" is the longest substring)
 **Sample Input 2**: `s = "bbbbb"`  
 **Expected Output 2**: `1` ("b" is the longest substring)
+
 **Links:**
 
 - LeetCode: [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
