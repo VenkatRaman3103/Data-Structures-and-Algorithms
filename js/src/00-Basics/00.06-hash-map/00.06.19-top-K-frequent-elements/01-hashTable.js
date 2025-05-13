@@ -31,8 +31,6 @@ function topKFrequent(nums, k) {
     return result;
 }
 
-// const nums = [1, 1, 1, 2, 2, 3];
-// const nums = [-1, -1];
 const nums = [4, 1, -1, 2, -1, 2, 3];
 const k = 2;
 const result = topKFrequent(nums, k);
