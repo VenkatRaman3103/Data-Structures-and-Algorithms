@@ -23,4 +23,4 @@ function majorityElement(nums) {
 
 const nums = [3, 2, 3, 2, 2, 2, 2];
 const result = majorityElement(nums);
-console.log(result);
+console.clear(result);

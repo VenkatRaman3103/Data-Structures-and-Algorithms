@@ -21,7 +21,6 @@ function majorityElement(nums) {
         }
     }
 
-    console.log(hashMap);
     return result;
 }
 
