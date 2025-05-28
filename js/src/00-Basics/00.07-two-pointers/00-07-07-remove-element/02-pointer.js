@@ -8,14 +8,12 @@ var removeElement = function (nums, val) {
 
     for (let r = 0; r < nums.length; r++) {
         if (nums[r] != val) {
-            let temp = nums[r];
             nums[r] = nums[l];
-            nums[l] = temp;
             l++;
         }
     }
     console.log(l);
-    return nums;
+    return l;
 };
 
 const nums = [3, 2, 2, 3];

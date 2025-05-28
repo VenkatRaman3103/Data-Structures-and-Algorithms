@@ -76,12 +76,16 @@
 **Expected Output**: `true`
 **Links**: LeetCode: [392. Is Subsequence](https://leetcode.com/problems/is-subsequence/)
 
+<!-- NOTE: skipped -->
+
 ### 11. Linked List Cycle
 
 **Problem**: Given a linked list, determine if it has a cycle in it.
 **Sample Input**: `head = [3,2,0,-4]` with a cycle from the last node to the second node
 **Expected Output**: `true`
 **Links**: LeetCode: [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+
+<!-- NOTE: skipped -->
 
 ### 12. Middle of the Linked List
 
