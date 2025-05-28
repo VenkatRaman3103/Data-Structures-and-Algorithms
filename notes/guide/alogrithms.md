@@ -1,8 +1,11 @@
+# Algorithm
+
 ## General Problem-Solving Patterns
 
 1. **Hash Maps/Tables** - O(1) lookups, tracking frequencies, finding duplicates
 2. **Two Pointers** - Processing arrays/strings with multiple positions simultaneously
 3. **Sliding Window** - Processing subarrays/substrings of variable or fixed length
+
 4. **Binary Search** - Finding elements in sorted arrays or search spaces
 5. **Breadth-First Search (BFS)** - Level-by-level graph/tree traversal
 6. **Depth-First Search (DFS)** - Exploring branches fully before backtracking

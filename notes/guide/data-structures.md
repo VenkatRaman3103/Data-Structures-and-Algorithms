@@ -1,4 +1,4 @@
-# Data Structures for Interview Preparation
+# Data Structures
 
 ## Linear Data Structures
 
