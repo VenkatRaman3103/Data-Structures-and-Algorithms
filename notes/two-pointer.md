@@ -53,6 +53,8 @@
 **Expected Output**: `true` (Both result in "ac")
 **Links**: LeetCode: [844. Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/)
 
+<!-- NOTE: skipped -->
+
 ### 8. Intersection of Two Arrays II
 
 **Problem**: Given two arrays, write a function to compute their intersection.
