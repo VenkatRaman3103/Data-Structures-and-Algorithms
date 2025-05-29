@@ -6,11 +6,11 @@ var countSegments = function (s) {
     let counter = 0;
     let isSegment = false;
 
-    for (let r = 0; r < s.length; r++) {
-        if (s[r] != ' ' && !isSegment) {
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] != ' ' && !isSegment) {
             isSegment = true;
-            counter++;
-        } else if (s[r] == ' ') {
+            counter += 1;
+        } else if (s[i] == ' ') {
             isSegment = false;
         }
     }

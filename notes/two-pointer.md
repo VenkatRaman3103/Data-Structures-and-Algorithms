@@ -122,12 +122,16 @@
 **Expected Output**: `true`
 **Links**: LeetCode: [925. Long Pressed Name](https://leetcode.com/problems/long-pressed-name/)
 
+<!-- NOTE: skipped -->
+
 ### 17. Palindrome Linked List
 
 **Problem**: Given a singly linked list, determine if it is a palindrome.
 **Sample Input**: `head = [1,2,2,1]`  
 **Expected Output**: `true`
 **Links**: LeetCode: [234. Palindrome Linked List](https://leetcode.com/problems/palindrome-linked-list/)
+
+<!-- NOTE: skipped -->
 
 ### 18. Remove Duplicates from Sorted List
 
