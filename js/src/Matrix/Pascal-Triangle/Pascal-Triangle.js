@@ -23,3 +23,4 @@ const numRows = 5;
 
 const result = generate(numRows);
 console.log(result);
+//
