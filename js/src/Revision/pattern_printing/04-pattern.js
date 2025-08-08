@@ -12,4 +12,32 @@ const pattern_4 = (n) => {
     }
 };
 
-pattern_4(5);
+// pattern_4(5);
+
+// recursion
+const pattern_4_recursion = (n) => {
+    const rows = (i) => {
+        if (i == n + 1) {
+            return;
+        }
+
+        const columns = (j) => {
+            if (j >= i + 1) {
+                return;
+            }
+
+            log(j);
+
+            columns(j + 1);
+        };
+
+        columns(1);
+        console.log();
+
+        rows(i + 1);
+    };
+
+    rows(1);
+};
+
+pattern_4_recursion(5);
