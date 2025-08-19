@@ -18,4 +18,4 @@ export const fizzBuzz = (n) => {
 
 const n = 15;
 const result = fizzBuzz(n);
-// console.log(result);
+console.log(result);

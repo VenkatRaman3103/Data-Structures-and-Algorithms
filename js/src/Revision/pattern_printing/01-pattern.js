@@ -9,6 +9,7 @@ const pattern_1 = (num) => {
         }
         console.log('\r');
     }
+    //
 };
 
 pattern_1(5);
