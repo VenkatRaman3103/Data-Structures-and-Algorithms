@@ -43,7 +43,7 @@ class MaxHeap {
                 break;
             }
 
-            this.swap(largest, index);
+            this.swap(index, largest);
             index = largest;
         }
     }
