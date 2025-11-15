@@ -45,9 +45,12 @@ var productExceptSelf = function (nums) {
         nums[i] = key;
     }
 
+    console.log('res:', prefix_arr);
+    console.log('post:', postfix_arr);
     return nums;
 };
 
 const nums = [1, 2, 3, 4];
+console.log('nums:', [1, 2, 3, 4]);
 const result = productExceptSelf(nums);
 console.log(result);
