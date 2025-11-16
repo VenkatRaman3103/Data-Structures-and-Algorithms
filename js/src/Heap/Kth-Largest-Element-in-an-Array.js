@@ -78,7 +78,7 @@ var findKthLargest = function (nums, k) {
         res.push(max);
     }
 
-    return res;
+    return res[res.length - 1];
 };
 
 const nums = [3, 2, 1, 5, 6, 4];
