@@ -26,6 +26,8 @@ var topKFrequent = function (nums, k) {
 
             index = parentIndex;
         }
+
+        console.log(heap);
     }
 
     for (let i = 0; i < k; i++) {
