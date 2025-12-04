@@ -1,4 +1,4 @@
-import { groupAnagrams } from 'src/leetCode_150/00-Revision/02-revision/04-Group-Anagram/1-hastable';
+import { groupAnagrams } from 'src/leetCode_150/00-Revision/02-revision/04-Group-Anagram/2-hashtable';
 
 const sortOutput = (arr) =>
     arr
