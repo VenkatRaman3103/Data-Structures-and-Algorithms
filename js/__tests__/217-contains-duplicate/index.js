@@ -1,4 +1,4 @@
-import { containsDuplicate } from '@revision/01-Contains-Duplicate/3-hashtable';
+import { containsDuplicate } from '@revision/01-Contains-Duplicate/4-hashtable';
 
 describe('217. Contains Duplicate', () => {
     test('Example 1: [1,2,3,1] -> true', () => {
