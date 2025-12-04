@@ -1,4 +1,4 @@
-import { isAnagram } from 'src/leetCode_150/00-Revision/02-revision/02-Valid-Anagram/1-hashtable';
+import { isAnagram } from '@revision/02-Valid-Anagram/2-hashtable';
 
 describe('242. Valid Anagram', () => {
     test('Case 1: s = "anagram", t = "nagaram"  |-> true', () => {
@@ -12,6 +12,6 @@ describe('242. Valid Anagram', () => {
         const s = 'rat';
         const t = 'car';
 
-        expect(isAnagram(s, t)).toBe(true);
+        expect(isAnagram(s, t)).toBe(false);
     });
 });
