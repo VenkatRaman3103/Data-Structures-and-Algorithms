@@ -10,6 +10,8 @@ const config = {
     },
     moduleNameMapper: {
         '^src/(.*)$': '<rootDir>/src/$1',
+        // Change this path when you start a new revision round
+        '^@revision/(.*)$': '<rootDir>/src/leetCode_150/00-Revision/02-revision/$1',
     },
 };
 

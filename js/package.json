@@ -5,9 +5,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "test": "jest",
-        "test:watch": "jest --watch",
-        "test:file": "jest --watch"
+        "test": "NODE_NO_WARNINGS=1 jest",
+        "test:watch": "NODE_NO_WARNINGS=1 jest --watch",
+        "test:file": "NODE_NO_WARNINGS=1 jest --watch"
     },
     "keywords": [],
     "author": "",

@@ -1,4 +1,4 @@
-import { containsDuplicate } from 'src/leetCode_150/00-Revision/02-revision/01-Contains-Duplicate/2-sorted';
+import { containsDuplicate } from '@revision/01-Contains-Duplicate/3-hashtable';
 
 describe('217. Contains Duplicate', () => {
     test('Example 1: [1,2,3,1] -> true', () => {

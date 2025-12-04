@@ -6,7 +6,8 @@
         "checkJs": false,
         "baseUrl": ".",
         "paths": {
-            "*": ["*", "src/*"]
+            "src/*": ["src/*"],
+            "@revision/*": ["src/leetCode_150/00-Revision/02-revision/*"]
         }
     },
     "include": ["src/**/*", "rough/**/*", "__tests__/**/*"],
