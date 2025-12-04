@@ -1,4 +1,4 @@
-var twoSum = function (nums, target) {
+export var twoSum = function (nums, target) {
     const hashTable = {};
 
     for (let i = 0; i < nums.length; i++) {
@@ -13,9 +13,3 @@ var twoSum = function (nums, target) {
         hashTable[key] = i;
     }
 };
-
-const nums = [2, 7, 11, 15];
-const target = 9;
-
-const result = twoSum(nums, target);
-console.log(result);

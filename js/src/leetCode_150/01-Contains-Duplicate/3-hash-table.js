@@ -1,4 +1,4 @@
-var containsDuplicate = function (nums) {
+export var containsDuplicate = function (nums) {
     const hashTable = {};
 
     for (let i = 0; i < nums.length; i++) {
@@ -13,8 +13,3 @@ var containsDuplicate = function (nums) {
 
     return false;
 };
-
-const nums = [1, 2, 3, 1];
-
-const result = containsDuplicate(nums);
-console.log(result);
