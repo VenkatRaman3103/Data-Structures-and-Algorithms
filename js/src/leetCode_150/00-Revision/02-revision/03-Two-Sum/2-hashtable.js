@@ -1,14 +1,16 @@
 export var twoSum = function (nums, target) {
+    let hashtable = {};
+
     for (let i = 0; i < nums.length; i++) {
-        let a = nums[i];
+        let n = nums[i];
 
-        for (let j = 0; j < nums.length; j++) {
-            let b = nums[j];
+        let expect = target - n;
 
-            if (i != j && a + b == target) {
-                return [i, j];
-            }
+        if (hashtable[n] != undefined) {
+            return [hashtable[n], i];
         }
+
+        hashtable[expect] = i;
     }
 };
 
