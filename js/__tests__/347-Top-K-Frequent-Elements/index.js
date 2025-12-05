@@ -1,4 +1,4 @@
-import { topKFrequent } from 'src/leetCode_150/00-Revision/02-revision/05-Top-K-Frequent-Elements/2-heap-max';
+import { topKFrequent } from 'src/leetCode_150/00-Revision/02-revision/05-Top-K-Frequent-Elements/3-bucket-sort';
 
 describe('347. Top K Frequent Elements', () => {
     const case_1 = `Example 1:
