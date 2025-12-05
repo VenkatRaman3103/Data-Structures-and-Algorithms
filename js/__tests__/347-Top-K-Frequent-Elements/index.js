@@ -13,6 +13,10 @@ describe('347. Top K Frequent Elements', () => {
                 Input: nums = [1,2,1,2,1,2,3,1,3,2], k = 2
                 Output: [1,2]`;
 
+    const case_4 = `Example 4:
+                Input: nums = [5,3,1,1,1,3,5,73,1], k = 3
+                Output: [1,3,5]`;
+
     test(case_1, () => {
         const nums = [1, 1, 1, 2, 2, 3];
         const k = 2;
@@ -29,5 +33,12 @@ describe('347. Top K Frequent Elements', () => {
         const nums = [1, 2, 1, 2, 1, 2, 3, 1, 3, 2];
         const k = 2;
         expect(topKFrequent(nums, k)).toStrictEqual([1, 2]);
+    });
+
+    test(case_4, () => {
+        const nums = [5, 3, 1, 1, 1, 3, 5, 73, 1];
+        const k = 3;
+        const output = [1, 3, 5];
+        expect(topKFrequent(nums, k)).toStrictEqual(output);
     });
 });
