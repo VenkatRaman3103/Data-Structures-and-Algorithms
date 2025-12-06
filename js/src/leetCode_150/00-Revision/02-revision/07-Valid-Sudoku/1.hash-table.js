@@ -42,4 +42,3 @@ const board = [
     ['.', '.', '.', '.', '8', '.', '.', '7', '9'],
 ];
 const result = isValidSudoku(board);
-// console.log(result);
