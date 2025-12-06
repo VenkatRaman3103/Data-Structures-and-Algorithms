@@ -1,4 +1,4 @@
-import { productExceptSelf } from 'src/leetCode_150/00-Revision/02-revision/06-Product-of-Array-Except-Self/1-brute-force';
+import { productExceptSelf } from 'src/leetCode_150/00-Revision/02-revision/06-Product-of-Array-Except-Self/4-product';
 
 describe('347. Top K Frequent Elements', () => {
     const case_1 = `Example 1:
