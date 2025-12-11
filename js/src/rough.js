@@ -44,6 +44,38 @@ class LinkedList {
         }
     }
 
+    reverse_pointers() {
+        let a = null;
+        let b = this.head;
+
+        while (b != null) {
+            let c = b.next;
+
+            b.next = a;
+            a = b;
+            b = c;
+        }
+        this.head = a;
+    }
+
+    revere_recusive() {
+        function recursiveFunc(node) {
+            if (node == null || node.next == null) {
+                return node;
+            }
+
+            let newHead = recursiveFunc(node.next);
+
+            node.next.next = node;
+            node.next = null;
+
+            return newHead;
+        }
+
+        this.head = recursiveFunc(this.head);
+        console.log(this.head);
+    }
+
     toAnArray() {
         let arr = [];
 
@@ -66,5 +98,7 @@ for (let n of nums) {
     linkedList.append(n);
 }
 
-linkedList.reverse_stack();
+// linkedList.reverse_stack();
+// linkedList.reverse_pointers();
+linkedList.revere_recusive();
 console.log(linkedList.toAnArray());
