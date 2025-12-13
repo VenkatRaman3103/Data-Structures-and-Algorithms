@@ -27,6 +27,16 @@ class LinkedList {
         }
     }
 
+    secondLastNode() {
+        let current = this.head;
+
+        while (current.next.next != null) {
+            current = current.next;
+        }
+
+        return current.value;
+    }
+
     print() {
         let arr = [];
 
@@ -50,3 +60,4 @@ for (let n of nums) {
 }
 
 linkedList.print();
+console.log(linkedList.secondLastNode());
