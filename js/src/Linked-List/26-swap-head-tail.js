@@ -23,9 +23,10 @@ class LinkedList {
         }
     }
 
-    concate(nodes) {
-        this.tail.next = nodes.head;
-        this.tail = nodes.tail;
+    swap() {
+        let temp = this.head.value;
+        this.head.value = this.tail.value;
+        this.tail.value = temp;
     }
 
     print() {
@@ -53,13 +54,5 @@ for (let n of nums) {
     linkedList.append(n);
 }
 
-let nodes = new LinkedList();
-
-let nums_2 = [6, 7, 8, 9, 10];
-
-for (let n of nums_2) {
-    nodes.append(n);
-}
-
-linkedList.concate(nodes);
+linkedList.swap();
 linkedList.print();

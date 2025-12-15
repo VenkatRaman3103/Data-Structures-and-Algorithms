@@ -28,7 +28,7 @@ class LinkedList {
         this.length++;
     }
 
-    conscate(nodes) {
+    concate(nodes) {
         let current = this.head;
 
         while (current.next != null) {
@@ -36,6 +36,7 @@ class LinkedList {
         }
 
         current.next = nodes.head;
+        this.length += nodes.length;
     }
 
     print() {
@@ -71,5 +72,5 @@ for (let n of nums_2) {
 
 console.log(nodes);
 
-linkedList.conscate(nodes);
+linkedList.concate(nodes);
 linkedList.print();
