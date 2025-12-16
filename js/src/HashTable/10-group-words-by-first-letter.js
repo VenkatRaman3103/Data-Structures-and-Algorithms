@@ -11,7 +11,6 @@ function groupByWords(words) {
         }
     }
 
-    //
     return hashTable;
 }
 
