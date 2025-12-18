@@ -29,17 +29,9 @@ var copyRandomList = function (head) {
     return hashTable.get(head);
 };
 
-class Node {
-    constructor(value) {
-        this.value = value;
-        this.next = null;
-        this.random = null;
-    }
-}
-
-const n1 = new Node(7);
-const n2 = new Node(13);
-const n3 = new Node(11);
+const n1 = new _Node(7);
+const n2 = new _Node(13);
+const n3 = new _Node(11);
 
 n1.next = n2;
 n2.next = n3;
