@@ -33,5 +33,5 @@ var mergeTwoLists = function (list1, list2) {
     return dummy.next;
 };
 
-const result = mergeTwoLists(list1.head, list2.head);
+const result = mergeTwoLists(list1.head, list2);
 printList(result);
