@@ -42,6 +42,20 @@ export class LinkedList {
     }
 }
 
+export function printList(node) {
+    const arr = [];
+
+    let current = node;
+
+    while (current != null) {
+        arr.push(current.val);
+        current = current.next;
+    }
+
+    console.log(arr);
+    return arr;
+}
+
 export function makeLinkedList(nums) {
     const list = new LinkedList();
 
