@@ -3,8 +3,8 @@ import { Queue } from './0-modules.js';
 class Node {
     constructor(value) {
         this.value = value;
-        this.left = null;
         this.right = null;
+        this.left = null;
     }
 }
 
@@ -14,7 +14,7 @@ class BinaryTree {
     }
 
     insert(value) {
-        const newNode = new Node(value);
+        let newNode = new Node(value);
 
         if (this.root == null) {
             this.root = newNode;
@@ -42,6 +42,28 @@ class BinaryTree {
             }
         }
     }
+
+    postorder() {
+        let res = [];
+
+        let stack = [this.root];
+
+        while (stack.length > 0) {
+            let node = stack.pop();
+
+            res.unshift(node.value);
+
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+        }
+
+        return res;
+    }
 }
 
 const binaryTree = new BinaryTree();
@@ -54,4 +76,5 @@ for (let n of nums) {
     }
 }
 
-binaryTree.preOrder();
+console.log(binaryTree.root);
+console.log(binaryTree.postorder());
