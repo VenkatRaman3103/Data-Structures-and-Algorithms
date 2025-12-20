@@ -1,6 +1,6 @@
-import { queue } from './0-modules.js';
+import { Queue } from './0-modules.js';
 
-class node {
+class Node {
     constructor(value) {
         this.value = value;
         this.right = null;
@@ -8,34 +8,34 @@ class node {
     }
 }
 
-class binarytree {
+class BinaryTree {
     constructor() {
         this.root = null;
     }
 
     insert(value) {
-        let newnode = new node(value);
+        let newNode = new Node(value);
 
         if (this.root == null) {
-            this.root = newnode;
+            this.root = newNode;
             return;
         }
 
-        let queue = new queue();
+        let queue = new Queue();
         queue.enqueue(this.root);
 
         while (queue.length > 0) {
             let node = queue.dequeue();
 
             if (node.left == null) {
-                node.left = newnode;
+                node.left = newNode;
                 break;
             } else {
                 queue.enqueue(node.left);
             }
 
             if (node.right == null) {
-                node.right = newnode;
+                node.right = newNode;
                 break;
             } else {
                 queue.enqueue(node.right);
@@ -64,11 +64,11 @@ class binarytree {
     }
 }
 
-const binarytree = new binarytree();
+const binaryTree = new BinaryTree();
 
 const nums = [1, 2, 3, 4, 5, null, 6];
 
-const nodes = nums.map((n) => (n == null ? null : new node(n)));
+const nodes = nums.map((n) => (n == null ? null : new Node(n)));
 
 for (let i = 0; i < nums.length; i++) {
     let node = nodes[i];
@@ -87,5 +87,6 @@ for (let i = 0; i < nums.length; i++) {
     }
 }
 
-binarytree.root = nodes[0];
-console.log(binarytree.inorder());
+binaryTree.root = nodes[0];
+console.log(nodes);
+console.log(binaryTree.inorder());
