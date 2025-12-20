@@ -39,23 +39,37 @@ class BinaryTree {
 const binaryTree = new BinaryTree();
 
 const nums = [1, 2, 3, 4, 5, null, 6];
-const nodes = nums.map((n) => (n == null ? null : new Node(n)));
 
-for (let i = 0; i < nodes.length; i++) {
-    let node = nodes[i];
+function makeBinaryTree(arr) {
+    let queue = [];
+    let root = new Node(arr[0]);
+    queue.push(root);
 
-    if (node != null) {
-        let left = i * 2 + 1;
-        let right = i * 2 + 2;
+    let i = 1;
 
-        if (left < nodes.length) {
-            node.left = nodes[left];
+    while (queue.length > 0) {
+        let node = queue.shift();
+
+        if (i < arr.length && arr[i] != null) {
+            let newNode = new Node(arr[i]);
+
+            node.left = newNode;
+            queue.push(node.left);
         }
-        if (right < nodes.length) {
-            node.right = nodes[right];
+        i++;
+
+        if (i < arr.length && arr[i] != null) {
+            let newNode = new Node(arr[i]);
+
+            node.right = newNode;
+            queue.push(node.right);
         }
+        i++;
     }
+    return root;
 }
 
-binaryTree.root = nodes[0];
+const root = makeBinaryTree(nums);
+
+binaryTree.root = root;
 binaryTree.levelTraversal();
