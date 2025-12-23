@@ -40,12 +40,39 @@ class BinaryTree {
             }
         }
     }
+
+    makeTreeFromArray(arr) {
+        let root = new Node(arr[0]);
+
+        let q = [];
+        q.push(root);
+
+        let i = 1;
+
+        while (q.length > 0) {
+            let node = q.shift();
+
+            if (arr[i] != null && i < arr.length) {
+                let leftNode = new Node(arr[i]);
+                node.left = leftNode;
+                q.push(node.left);
+            }
+            i++;
+
+            if (arr[i] != null && i < arr.length) {
+                let rightNode = new Node(arr[i]);
+                node.right = rightNode;
+                q.push(node.right);
+            }
+            i++;
+        }
+
+        this.root = root;
+    }
 }
 
 const binaryTree = new BinaryTree();
-binaryTree.insert(1);
-binaryTree.insert(2);
-binaryTree.insert(3);
-binaryTree.insert(4);
-binaryTree.insert(5);
+
+const nums = [1, 2, 3, 4, 5, null, 6];
+binaryTree.makeTreeFromArray(nums);
 console.log(binaryTree.root);
