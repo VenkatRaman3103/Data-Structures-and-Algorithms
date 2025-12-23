@@ -14,11 +14,31 @@ class BinaryTree {
     }
 
     preOrder() {
+        let res = [];
+
         if (this.root == null) {
             return null;
         }
 
         let stack = new Stack();
+        stack.push(this.root);
+
+        while (stack.size > 0) {
+            let node = stack.pop();
+
+            res.push(node.val);
+
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+        }
+
+        console.log(res);
+        return res;
     }
 
     make(arr) {
@@ -54,5 +74,4 @@ class BinaryTree {
 const binaryTree = new BinaryTree();
 const nums = [1, 2, 3, 4, 5, null, 6];
 binaryTree.make(nums);
-
-console.log(binaryTree.root);
+binaryTree.preOrder();

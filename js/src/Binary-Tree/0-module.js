@@ -87,7 +87,7 @@ export class Stack {
 
         this.top = this.top.below;
 
-        this.size++;
+        this.size--;
 
         return node;
     }
