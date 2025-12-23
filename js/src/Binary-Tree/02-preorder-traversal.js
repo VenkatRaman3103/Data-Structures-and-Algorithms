@@ -1,3 +1,5 @@
+import { Stack } from './0-module.js';
+
 class Node {
     constructor(val) {
         this.val = val;
@@ -12,7 +14,11 @@ class BinaryTree {
     }
 
     preOrder() {
-        //
+        if (this.root == null) {
+            return null;
+        }
+
+        let stack = new Stack();
     }
 
     make(arr) {

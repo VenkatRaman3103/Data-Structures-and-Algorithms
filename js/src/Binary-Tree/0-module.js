@@ -1,11 +1,11 @@
-class ListNode {
+class QueueNode {
     constructor(val) {
         this.val = val;
         this.next = null;
     }
 }
 
-class Queue {
+export class Queue {
     constructor() {
         this.head = null;
         this.tail = null;
@@ -13,7 +13,7 @@ class Queue {
     }
 
     enqueue(val) {
-        const newNode = new ListNode(val);
+        const newNode = new QueueNode(val);
 
         if (this.head == null) {
             this.head = newNode;
@@ -55,5 +55,40 @@ class Queue {
 
         console.log(res);
         return res;
+    }
+}
+
+// --- stack --- //
+class StackNode {
+    constructor(val) {
+        this.val = val;
+        this.below = null;
+    }
+}
+
+export class Stack {
+    constructor() {
+        this.top = null;
+        this.size = 0;
+    }
+
+    push(val) {
+        let newNode = new StackNode(val);
+        newNode.below = this.top;
+        this.top = newNode;
+
+        this.size++;
+
+        return this.top.val;
+    }
+
+    pop() {
+        let node = this.top.val;
+
+        this.top = this.top.below;
+
+        this.size++;
+
+        return node;
     }
 }
