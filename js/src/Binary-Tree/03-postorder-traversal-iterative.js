@@ -1,4 +1,4 @@
-import { Queue } from './0-module.js';
+import { Queue, Stack } from './0-module.js';
 
 class Node {
     constructor(val) {
@@ -11,6 +11,30 @@ class Node {
 class BinaryTree {
     constructor() {
         this.root = null;
+    }
+
+    postOrder() {
+        let res = [];
+
+        let stack = new Stack();
+        stack.push(this.root);
+
+        while (stack.size > 0) {
+            let node = stack.pop();
+
+            res.unshift(node.val);
+
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+        }
+
+        console.log(res);
+        return res;
     }
 
     insert(val) {
@@ -76,5 +100,6 @@ class BinaryTree {
 }
 
 const binaryTree = new BinaryTree();
-// binaryTree.make([1, 2, 3, 4, 5, null, 6]);
+binaryTree.make([1, 2, 3, 4, 5, null, 6]);
 console.log(binaryTree.root);
+binaryTree.postOrder();
