@@ -13,6 +13,29 @@ class BinaryTree {
         this.root = null;
     }
 
+    levelOrder() {
+        let res = [];
+
+        let q = new Queue();
+        q.enqueue(this.root);
+
+        while (q.length > 0) {
+            let node = q.dequeue();
+            res.push(node.val);
+
+            if (node.left != null) {
+                q.enqueue(node.left);
+            }
+
+            if (node.right != null) {
+                q.enqueue(node.right);
+            }
+        }
+
+        console.log(res);
+        return res;
+    }
+
     make(arr) {
         let root = new Node(arr[0]);
 
@@ -47,3 +70,4 @@ class BinaryTree {
 
 const binaryTree = new BinaryTree();
 binaryTree.make([1, 2, 3, 4, 5, null, 6]);
+binaryTree.levelOrder();
