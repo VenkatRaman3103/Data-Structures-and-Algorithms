@@ -57,13 +57,55 @@ class Stack {
     }
 }
 
-const stack = new Stack();
-
-for (let i = 1; i <= 3; i++) {
-    stack.push(i);
+// Queue
+class QueueNode {
+    constructor(val) {
+        this.val = val;
+        this.next = null;
+    }
 }
 
-// console.log(stack.pop());
-// console.log(stack.pop());
-// console.log(stack.pop());
-stack.print();
+class Queue {
+    constructor() {
+        this.head = null;
+        this.tail = null;
+        this.legth = 0;
+    }
+
+    enqueue(val) {
+        let newNode = new QueueNode(val);
+
+        if (this.head == null) {
+            this.head = newNode;
+            this.tail = newNode;
+        } else {
+            this.tail.next = newNode;
+            this.tail = newNode;
+        }
+
+        this.legth++;
+    }
+
+    dequeue() {
+        if (this.head == null) {
+            return null;
+        }
+
+        let val = this.head.val;
+        this.head = this.head.next;
+
+        if (this.head == null) {
+            this.tail = null;
+        }
+
+        return val;
+    }
+}
+
+const q = new Queue();
+
+for (let i = 1; i <= 3; i++) {
+    q.enqueue(i);
+}
+
+console.log(q.head);
