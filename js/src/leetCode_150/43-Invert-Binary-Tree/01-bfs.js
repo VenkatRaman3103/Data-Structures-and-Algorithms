@@ -135,69 +135,34 @@ class BinaryTree {
     }
 }
 
-function calcHeight_bfs(root) {
-    if (root == null || root.val == undefined) {
-        return 0;
+var invertTree = function (root) {
+    if (!root) {
+        return [];
     }
 
     let q = new QueueStruct();
     q.enqueue(root);
 
-    let h = 0;
-
     while (q.length > 0) {
-        let qLength = q.length;
+        let node = q.dequeue();
 
-        for (let i = 0; i < qLength; i++) {
-            let node = q.dequeue();
-
-            if (node.left != null) {
-                q.enqueue(node.left);
-            }
-
-            if (node.right != null) {
-                q.enqueue(node.right);
-            }
-        }
-        h += 1;
-    }
-
-    return h;
-}
-
-function calcHeight_dfs(root) {
-    if (root == null || root.val == undefined) {
-        return 0;
-    }
-
-    let stack = new Stack();
-    stack.push([root, 0]);
-
-    let h = 0;
-
-    while (stack.size > 0) {
-        let [node, depth] = stack.pop();
+        [node.left, node.right] = [node.right, node.left];
 
         if (node.left != null) {
-            stack.push([node.left, depth + 1]);
+            q.enqueue(node.left);
         }
 
         if (node.right != null) {
-            stack.push([node.right, depth + 1]);
+            q.enqueue(node.right);
         }
-
-        h = depth + 1;
     }
 
-    return h;
-}
+    return root;
+};
 
 const binaryTree = new BinaryTree();
 const root = [1, 2, 3, 4, 5, 6];
 binaryTree.make(root);
 
-const result_bfs = calcHeight_bfs(binaryTree.root);
-// console.log(result);
-
-const result_dfs = calcHeight_dfs(binaryTree.root);
-console.log(result_dfs);
+const result = invertTree(binaryTree.root);
+console.log(result);
