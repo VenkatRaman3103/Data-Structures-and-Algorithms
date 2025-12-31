@@ -174,7 +174,88 @@ class BinaryTree {
 
         this.root = root;
     }
+
+    preOrder() {
+        if (this.root == null) {
+            return [];
+        }
+
+        let res = [];
+
+        let stack = new Stack();
+        stack.push(this.root);
+
+        while (stack.size > 0) {
+            let node = stack.pop();
+
+            res.push(node.val);
+
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+        }
+
+        return res;
+    }
+
+    postOrder() {
+        if (this.root == null) {
+            return [];
+        }
+
+        let res = [];
+
+        let stack = new Stack();
+        stack.push(this.root);
+
+        while (stack.size > 0) {
+            let node = stack.pop();
+
+            res.unshift(node.val);
+
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+        }
+
+        return res;
+    }
+
+    inOrder() {
+        if (this.root == null) {
+            return [];
+        }
+
+        let res = [];
+
+        let stack = new Stack();
+        let curr = this.root;
+
+        while (curr != null || stack.size > 0) {
+            if (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
+            } else {
+                curr = stack.pop();
+                res.push(curr.val);
+                curr = curr.right;
+            }
+        }
+
+        return res;
+    }
 }
 
 const binaryTree = new BinaryTree();
 binaryTree.make([1, 2, 3, 4, 5, null, 6]);
+console.log(binaryTree.preOrder());
+console.log(binaryTree.postOrder());
+console.log(binaryTree.inOrder());
