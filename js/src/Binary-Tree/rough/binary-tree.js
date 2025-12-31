@@ -98,6 +98,8 @@ class Queue {
             this.tail = null;
         }
 
+        this.length--;
+
         return val;
     }
 }
@@ -202,6 +204,18 @@ class BinaryTree {
         return res;
     }
 
+    preOrder_recursion(node, res = []) {
+        if (node == null) {
+            return res;
+        }
+
+        res.push(node.val);
+        this.preOrder_recursion(node.left, res);
+        this.preOrder_recursion(node.right, res);
+
+        return res;
+    }
+
     postOrder() {
         if (this.root == null) {
             return [];
@@ -229,6 +243,18 @@ class BinaryTree {
         return res;
     }
 
+    postOrder_recursion(node, res = []) {
+        if (node == null) {
+            return res;
+        }
+
+        this.postOrder_recursion(node.left, res);
+        this.postOrder_recursion(node.right, res);
+        res.push(node.val);
+
+        return res;
+    }
+
     inOrder() {
         if (this.root == null) {
             return [];
@@ -252,10 +278,53 @@ class BinaryTree {
 
         return res;
     }
+
+    inOrder_recursion(node, res = []) {
+        if (node == null) {
+            return;
+        }
+
+        this.inOrder_recursion(node.left, res);
+        res.push(node.val);
+        this.inOrder_recursion(node.right, res);
+
+        return res;
+    }
+
+    levelOrder() {
+        if (this.root == null) {
+            return [];
+        }
+
+        let res = [];
+
+        let q = new Queue();
+        q.enqueue(this.root);
+
+        while (q.length > 0) {
+            let node = q.dequeue();
+
+            res.push(node.val);
+
+            if (node.left != null) {
+                q.enqueue(node.left);
+            }
+
+            if (node.right != null) {
+                q.enqueue(node.right);
+            }
+        }
+
+        return res;
+    }
 }
 
 const binaryTree = new BinaryTree();
 binaryTree.make([1, 2, 3, 4, 5, null, 6]);
 console.log(binaryTree.preOrder());
+console.log(binaryTree.preOrder_recursion(binaryTree.root));
 console.log(binaryTree.postOrder());
+console.log(binaryTree.postOrder_recursion(binaryTree.root));
 console.log(binaryTree.inOrder());
+console.log(binaryTree.inOrder_recursion(binaryTree.root));
+console.log(binaryTree.levelOrder());
