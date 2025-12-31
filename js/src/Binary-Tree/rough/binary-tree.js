@@ -69,7 +69,7 @@ class Queue {
     constructor() {
         this.head = null;
         this.tail = null;
-        this.legth = 0;
+        this.length = 0;
     }
 
     enqueue(val) {
@@ -83,7 +83,7 @@ class Queue {
             this.tail = newNode;
         }
 
-        this.legth++;
+        this.length++;
     }
 
     dequeue() {
@@ -102,10 +102,79 @@ class Queue {
     }
 }
 
-const q = new Queue();
-
-for (let i = 1; i <= 3; i++) {
-    q.enqueue(i);
+// binary tree
+class BinaryNode {
+    constructor(val) {
+        this.val = val;
+        this.left = null;
+        this.right = null;
+    }
 }
 
-console.log(q.head);
+class BinaryTree {
+    constructor() {
+        this.root = null;
+    }
+
+    insert(val) {
+        let newNode = new BinaryNode(val);
+
+        if (this.root == null) {
+            this.root = newNode;
+            return;
+        }
+
+        let q = new Queue();
+        q.enqueue(this.root);
+
+        while (q.length > 0) {
+            let node = q.dequeue();
+
+            if (node.left != null) {
+                q.enqueue(node.left);
+            } else {
+                node.left = newNode;
+                return;
+            }
+
+            if (node.right != null) {
+                q.enqueue(node.right);
+            } else {
+                node.right = newNode;
+                return;
+            }
+        }
+    }
+
+    make(arr) {
+        let root = new BinaryNode(arr[0]);
+
+        let q = new Queue();
+        q.enqueue(root);
+
+        let i = 1;
+
+        while (q.length > 0 && i < arr.length) {
+            let node = q.dequeue();
+
+            if (i < arr.length && arr[i] != null) {
+                let leftNode = new BinaryNode(arr[i]);
+                node.left = leftNode;
+                q.enqueue(node.left);
+            }
+            i++;
+
+            if (i < arr.length && arr[i] != null) {
+                let rightNode = new BinaryNode(arr[i]);
+                node.right = rightNode;
+                q.enqueue(node.right);
+            }
+            i++;
+        }
+
+        this.root = root;
+    }
+}
+
+const binaryTree = new BinaryTree();
+binaryTree.make([1, 2, 3, 4, 5, null, 6]);
