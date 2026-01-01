@@ -13,8 +13,17 @@ var diameterOfBinaryTree = function (root) {
         return 0;
     }
 
-    let lh = calcHeight(root);
-    console.log(lh);
+    let lh = calcHeight(root.left);
+    let rh = calcHeight(root.right);
+
+    let diameter = lh + rh;
+
+    let left = diameterOfBinaryTree(root.left);
+    let right = diameterOfBinaryTree(root.right);
+
+    let sub = Math.max(left, right);
+
+    return Math.max(sub, diameter);
 };
 
 const root = binaryTree([3, 9, 20, null, null, 15, 7]);
