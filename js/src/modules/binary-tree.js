@@ -1,3 +1,37 @@
+class StackNode {
+    constructor(val) {
+        this.val = val;
+        this.below = null;
+    }
+}
+
+export class StackStruct {
+    constructor() {
+        this.top = null;
+        this.size = 0;
+    }
+
+    push(val) {
+        let newNode = new StackNode(val);
+        newNode.below = this.top;
+        this.top = newNode;
+
+        this.size++;
+
+        return this.top.val;
+    }
+
+    pop() {
+        let node = this.top.val;
+
+        this.top = this.top.below;
+
+        this.size--;
+
+        return node;
+    }
+}
+
 class QueueNode {
     constructor(val) {
         this.val = val;
