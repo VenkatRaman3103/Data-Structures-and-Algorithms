@@ -30,5 +30,4 @@ function depthOfTarget(root, target) {
 const root = binaryTree([1, 2, 3, 4, 5, null, 6]);
 
 const result = depthOfTarget(root, 5);
-// const result = findDepth(root);
 console.log(result);
