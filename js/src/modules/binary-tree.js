@@ -5,7 +5,7 @@ class QueueNode {
     }
 }
 
-class QueueStruct {
+export class QueueStruct {
     constructor() {
         this.head = null;
         this.tail = null;
