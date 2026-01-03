@@ -30,7 +30,38 @@ class LinkedList {
     }
 
     print() {
-        //
+        if (this.head == null) {
+            return [];
+        }
+
+        let res = [];
+
+        let curr = this.head;
+
+        while (curr != null) {
+            res.push(curr.val);
+            curr = curr.next;
+        }
+
+        console.log(res);
+        return res;
+    }
+
+    count() {
+        if (this.head == null) {
+            return 0;
+        }
+
+        let acc = 0;
+
+        let curr = this.head;
+
+        while (curr != null) {
+            acc += 1;
+            curr = curr.next;
+        }
+
+        return acc;
     }
 }
 
@@ -40,4 +71,5 @@ for (let i = 1; i <= 5; i++) {
     linkedList.append(i);
 }
 
-// linkedList.print();
+linkedList.print();
+console.log(linkedList.count());
