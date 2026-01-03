@@ -7,7 +7,8 @@
         "baseUrl": ".",
         "paths": {
             "src/*": ["src/*"],
-            "@revision/*": ["src/leetCode_150/00-Revision/02-revision/*"]
+            "@revision/*": ["src/leetCode_150/00-Revision/02-revision/*"],
+            "@module/*": ["src/module/*"],
         }
     },
     "include": ["src/**/*", "rough/**/*", "__tests__/**/*"],

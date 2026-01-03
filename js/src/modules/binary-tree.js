@@ -1,4 +1,4 @@
-class StackNode {
+export class StackNode {
     constructor(val) {
         this.val = val;
         this.below = null;
@@ -92,7 +92,7 @@ export class QueueStruct {
     }
 }
 
-class Node {
+export class Node {
     constructor(val) {
         this.val = val;
         this.left = null;
