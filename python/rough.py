@@ -1,0 +1,3 @@
+var = "venkat"
+
+print(var)

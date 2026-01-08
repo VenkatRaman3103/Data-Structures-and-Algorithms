@@ -25,13 +25,21 @@ class LinkedList {
 
             curr.next = newNode;
         }
+
+        this.length += 1;
     }
 
     prepend(val) {
         let newNode = new ListNode(val);
 
-        newNode.next = this.head;
-        this.head = newNode;
+        if (this.head == null) {
+            this.head = newNode;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+
+        this.length += 1;
     }
 
     print(head) {
@@ -47,14 +55,42 @@ class LinkedList {
         console.log(res);
         return res;
     }
+
+    merge(head) {
+        let dummy = new ListNode(0);
+        let curr = dummy;
+
+        let a = this.head;
+        let b = head;
+
+        while (a.next != null || b.next != null) {
+            if (a.val < b.val) {
+                curr.next = new ListNode(a.val);
+                a = a.next;
+            } else if (b.val < a.val) {
+                curr.next = new ListNode(b.val);
+                b = b.next;
+            }
+
+            curr = curr.next;
+        }
+        this.head = dummy.next;
+    }
 }
 
-const linkedList = new LinkedList();
+const l1 = new LinkedList();
 
-for (let i = 1; i <= 5; i++) {
-    linkedList.append(i);
-}
+l1.append(1);
+l1.append(3);
+l1.append(5);
+l1.append(7);
 
-linkedList.prepend(0);
+const l2 = new LinkedList();
 
-linkedList.print(linkedList.head);
+l2.append(2);
+l2.append(4);
+l2.append(6);
+l2.append(8);
+
+l1.merge(l2.head);
+l1.print(l1.head);
