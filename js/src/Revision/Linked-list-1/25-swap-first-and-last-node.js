@@ -43,21 +43,22 @@ class LinkedList {
     }
 
     swap() {
+        let prev = null;
         let curr = this.head;
 
-        while (curr.next.next != null) {
+        while (curr.next != null) {
+            prev = curr;
             curr = curr.next;
         }
 
-        let first = this.head;
-        let last = curr.next;
-
+        let last = curr;
         let temp = this.head.next;
-        last.next = temp;
-        curr.next = first;
+        this.head.next = null;
+        let first = this.head;
 
-        console.log(first);
-        console.log(last);
+        prev.next = first;
+        last.next = temp;
+        this.head = last;
     }
 
     print() {
@@ -77,9 +78,9 @@ class LinkedList {
 
 const linkedList = new LinkedList();
 
-for (let i = 1; i <= 3; i++) {
+for (let i = 1; i <= 5; i++) {
     linkedList.append(i);
 }
 
-linkedList.print();
 linkedList.swap();
+linkedList.print();
