@@ -81,4 +81,5 @@ for (let i = 1; i <= 5; i++) {
 
 linkedList.rotate();
 linkedList.rotate();
+linkedList.rotate();
 linkedList.print();
