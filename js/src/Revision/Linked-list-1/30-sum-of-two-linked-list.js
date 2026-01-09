@@ -42,10 +42,29 @@ class LinkedList {
         this.length += 1;
     }
 
-    print() {
+    sum(list) {
+        let dummy = new ListNode(0);
+        let curr = dummy;
+
+        let l1 = this.head;
+        let l2 = list;
+
+        while (l1 != null && l2 != null) {
+            let newNode = new ListNode(l1.val + l2.val);
+            curr.next = newNode;
+            curr = curr.next;
+
+            l1 = l1.next;
+            l2 = l2.next;
+        }
+
+        return dummy.next;
+    }
+
+    print(head) {
         let res = [];
 
-        let curr = this.head;
+        let curr = head;
 
         while (curr != null) {
             res.push(curr.val);
@@ -63,14 +82,12 @@ for (let i = 1; i <= 5; i++) {
     l1.append(i);
 }
 
-l1.print();
-
 const l2 = new LinkedList();
 
 for (let i = 1; i <= 5; i++) {
     l2.append(i);
 }
 
-l2.print();
-
-l1.sum(l2.head);
+// l1.sum(l2.head);
+let sumList = l1.sum(l2.head);
+l1.print(sumList);
