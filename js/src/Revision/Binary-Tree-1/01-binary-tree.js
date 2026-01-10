@@ -1,9 +1,4 @@
-class QueueNode {
-    constructor(val) {
-        this.val = val;
-        this.next = null;
-    }
-}
+import { Queue } from './modules.js';
 
 class TreeNode {
     constructor(val) {
@@ -19,6 +14,14 @@ class BinaryTree {
     }
 
     insert(val) {
-        //
+        let newNode = new TreeNode(val);
+
+        if (this.root == null) {
+            this.root = newNode;
+
+            return;
+        }
+
+        let q = new Queue();
     }
 }
