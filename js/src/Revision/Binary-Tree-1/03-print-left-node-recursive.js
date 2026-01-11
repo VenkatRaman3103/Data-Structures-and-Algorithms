@@ -35,12 +35,25 @@ class BinaryTree {
             }
 
             if (node.right != null) {
-                node.right = newNode;
+                q.enqueue(node.right);
             } else {
                 node.right = newNode;
                 return;
             }
         }
+    }
+
+    printLeaf(root = this.root) {
+        if (root == null) {
+            return;
+        }
+
+        if (root.left == null && root.right == null) {
+            console.log(root.val);
+        }
+
+        this.printLeaf(root.left);
+        this.printLeaf(root.right);
     }
 }
 
@@ -51,3 +64,4 @@ for (let i = 1; i <= 5; i++) {
 }
 
 console.log(b.root);
+b.printLeaf();
