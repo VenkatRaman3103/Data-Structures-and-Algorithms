@@ -24,7 +24,7 @@ class BinaryTree {
         let q = new Queue();
         q.enqueue(this.root);
 
-        while (q.length != null) {
+        while (q.length > 0) {
             let node = q.dequeue();
 
             if (node.left != null) {
@@ -42,12 +42,34 @@ class BinaryTree {
             }
         }
     }
+
+    printLeaf() {
+        let q = new Queue();
+        q.enqueue(this.root);
+
+        while (q.length > 0) {
+            let node = q.dequeue();
+
+            if (node.left == null && node.right == null) {
+                console.log(node.val);
+            }
+
+            if (node.left != null) {
+                q.enqueue(node.left);
+            }
+
+            if (node.right != null) {
+                q.enqueue(node.right);
+            }
+        }
+    }
 }
 
 const binaryTree = new BinaryTree();
 
-for (let i = 0; i <= 5; i++) {
+for (let i = 1; i <= 5; i++) {
     binaryTree.insert(i);
 }
 
-console.log(binaryTree.root);
+// console.log(binaryTree.root);
+binaryTree.printLeaf();
