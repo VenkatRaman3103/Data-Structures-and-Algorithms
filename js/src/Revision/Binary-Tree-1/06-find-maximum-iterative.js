@@ -29,7 +29,7 @@ class Queue {
 
     dequeue() {
         if (this.head == null) {
-            return 0;
+            return null;
         }
 
         let val = this.head.val;
@@ -43,6 +43,20 @@ class Queue {
         this.length -= 1;
 
         return val;
+    }
+
+    print() {
+        let res = [];
+
+        let curr = this.head;
+
+        while (curr != null) {
+            res.push(curr.val);
+            curr = curr.next;
+        }
+
+        console.log(res);
+        return res;
     }
 }
 
@@ -89,20 +103,40 @@ class BinaryTree {
         }
     }
 
-    sum(root = this.root) {
-        if (root.val == null) {
-            return 0;
+    getMax() {
+        if (this.root == null) {
+            return null;
         }
 
-        return root.val + this.sum(root.left) + this.sum(root.right);
+        let q = new Queue();
+        q.enqueue(this.root);
+
+        let max = this.root.val;
+
+        while (q.length > 0) {
+            let node = q.dequeue();
+
+            max = Math.max(max, node.val);
+
+            if (node.left != null) {
+                q.enqueue(node.left);
+            }
+
+            if (node.right != null) {
+                q.enqueue(node.right);
+            }
+        }
+
+        return max;
     }
 }
 
 const b = new BinaryTree();
 
-for (let i = 1; i <= 5; i++) {
+b.insert(12);
+for (let i = 1; i <= 6; i++) {
     b.insert(i);
 }
 
-const result = b.sum();
+const result = b.getMax();
 console.log(result);
