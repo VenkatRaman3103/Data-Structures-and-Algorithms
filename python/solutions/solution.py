@@ -1,2 +1,0 @@
-userInput = input("")
-print(userInput)

@@ -23,5 +23,32 @@ class BinaryTree {
         }
 
         let q = new Queue();
+        q.enqueue(this.root);
+
+        while (q.length != null) {
+            let node = q.dequeue();
+
+            if (node.left != null) {
+                q.enqueue(node.left);
+            } else {
+                node.left = newNode;
+                return;
+            }
+
+            if (node.right != null) {
+                q.enqueue(node.right);
+            } else {
+                node.right = newNode;
+                return;
+            }
+        }
     }
 }
+
+const binaryTree = new BinaryTree();
+
+for (let i = 1; i <= 5; i++) {
+    binaryTree.insert(i);
+}
+
+console.log(JSON.stringify(binaryTree.root, null, 4));

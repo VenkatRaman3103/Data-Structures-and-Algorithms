@@ -40,6 +40,7 @@ export class Queue {
             this.tail = null;
         }
 
+        this.length -= 1;
         return val;
     }
 
