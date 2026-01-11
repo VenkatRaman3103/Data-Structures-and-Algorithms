@@ -106,6 +106,14 @@ class BinaryTree {
             }
         }
     }
+
+    count(root = this.root) {
+        if (root == null) {
+            return 0;
+        }
+
+        return 1 + this.count(root.left) + this.count(root.right);
+    }
 }
 
 const b = new BinaryTree();
@@ -114,4 +122,5 @@ for (let i = 1; i <= 5; i++) {
     b.insert(i);
 }
 
-console.log(b.root);
+const result = b.count();
+console.log(result);
