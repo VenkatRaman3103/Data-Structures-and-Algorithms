@@ -107,12 +107,16 @@ class BinaryTree {
         }
     }
 
-    printLevel() {
+    printLevel(k) {
         let res = [];
 
         function fn(root, level) {
             if (root == null) {
                 return 0;
+            }
+
+            if (k == level) {
+                return res;
             }
 
             if (res[level] == undefined) {
