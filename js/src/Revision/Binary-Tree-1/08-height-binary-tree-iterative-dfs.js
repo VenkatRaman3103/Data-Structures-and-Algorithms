@@ -166,12 +166,41 @@ class BinaryTree {
             }
         }
     }
+
+    print() {
+        if (this.root == null) {
+            return null;
+        }
+
+        let res = [];
+
+        let s = new Stack();
+        s.push(this.root);
+
+        while (s.size > 0) {
+            let node = s.pop();
+
+            res.push(node.val);
+
+            if (node.left != null) {
+                s.push(node.left);
+            }
+
+            if (node.right != null) {
+                s.push(node.right);
+            }
+        }
+
+        console.log(res);
+        return res;
+    }
 }
 
-// const b = new BinaryTree();
-//
-// for (let i = 1; i <= 8; i++) {
-//     b.insert(i);
-// }
-//
-// console.log(b.root);
+const b = new BinaryTree();
+
+for (let i = 1; i <= 6; i++) {
+    b.insert(i);
+}
+
+console.log(b.root);
+b.print();
