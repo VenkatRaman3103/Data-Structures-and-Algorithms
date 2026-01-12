@@ -143,6 +143,7 @@ class BinaryTree {
 const b = new BinaryTree();
 
 for (let i = 1; i <= 9; i++) {
+    //
     b.insert(i);
 }
 
