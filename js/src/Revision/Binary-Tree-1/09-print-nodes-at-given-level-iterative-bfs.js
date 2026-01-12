@@ -106,12 +106,53 @@ class BinaryTree {
             }
         }
     }
+
+    printLevel(k) {
+        if (this.root == null) {
+            return [];
+        }
+
+        let res = [];
+
+        let q = new Queue();
+        q.enqueue(this.root);
+
+        while (q.length > 0) {
+            let qLength = q.length;
+            let elements = [];
+
+            if (k == 0) {
+                return res;
+            }
+
+            for (let i = 0; i < qLength; i++) {
+                let node = q.dequeue();
+
+                elements.push(node.val);
+
+                if (node.left != null) {
+                    q.enqueue(node.left);
+                }
+
+                if (node.right != null) {
+                    q.enqueue(node.right);
+                }
+            }
+
+            k -= 1;
+
+            res.push(elements);
+        }
+
+        return res;
+    }
 }
 
 const b = new BinaryTree();
 
-for (let i = 1; i <= 5; i++) {
+for (let i = 1; i <= 12; i++) {
     b.insert(i);
 }
 
-console.log(b.root);
+const result = b.printLevel(3);
+console.log(result);
