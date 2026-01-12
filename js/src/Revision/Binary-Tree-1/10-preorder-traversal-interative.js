@@ -198,7 +198,30 @@ class BinaryTree {
     }
 
     preOrder() {
-        //
+        if (this.root == null) {
+            return null;
+        }
+
+        let res = [];
+
+        let stack = new Stack();
+        stack.push(this.root);
+
+        while (stack.size > 0) {
+            let node = stack.pop();
+
+            res.push(node.val);
+
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+        }
+
+        console.log(res);
     }
 }
 
@@ -206,5 +229,7 @@ const b = new BinaryTree();
 
 const nodes = [1, 2, 3, 4, null, 6, 7];
 b.make(nodes);
+
+b.preOrder();
 
 console.log(b.root);
