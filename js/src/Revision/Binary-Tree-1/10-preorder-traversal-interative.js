@@ -9,7 +9,7 @@ class Queue {
     constructor() {
         this.head = null;
         this.tail = null;
-        this.lenght = 0;
+        this.length = 0;
     }
 
     enqueue(val) {
@@ -23,7 +23,7 @@ class Queue {
             this.tail = newNode;
         }
 
-        this.lenght += 1;
+        this.length += 1;
     }
 
     dequeue() {
@@ -39,7 +39,7 @@ class Queue {
             this.tail = null;
         }
 
-        this.lenght -= 1;
+        this.length -= 1;
 
         return val;
     }
@@ -88,7 +88,7 @@ class BinaryTree {
         let q = new Queue();
         q.enqueue(this.root);
 
-        while (q.lenght > 0) {
+        while (q.length > 0) {
             let node = q.dequeue();
 
             if (node.left != null) {
@@ -106,12 +106,46 @@ class BinaryTree {
             }
         }
     }
+
+    make(arr) {
+        let root = new TreeNode(arr[0]);
+
+        let q = new Queue();
+        q.enqueue(root);
+
+        let i = 1;
+
+        while (q.length > 0) {
+            let node = q.dequeue();
+
+            if (arr[i] != null && i < arr.length) {
+                let leftNode = new TreeNode(arr[i]);
+                node.left = leftNode;
+                q.enqueue(node.left);
+            }
+            i++;
+
+            if (arr[i] != null && i < arr.length) {
+                let rightNode = new TreeNode(arr[i]);
+                node.right = rightNode;
+                q.enqueue(node.right);
+            }
+            i++;
+        }
+
+        this.root = root;
+
+        return this.root;
+    }
 }
 
 const b = new BinaryTree();
 
-for (let i = 1; i <= 5; i++) {
-    b.insert(i);
-}
+// for (let i = 1; i <= 5; i++) {
+//     b.insert(i);
+// }
+
+const nodes = [1, 2, 3, 4, null, 6, 7];
+b.make(nodes);
 
 console.log(b.root);
