@@ -167,6 +167,33 @@ class BinaryTree {
         }
     }
 
+    getHeight() {
+        if (this.root == null) {
+            return 0;
+        }
+
+        let s = new Stack();
+        s.push([this.root, 1]);
+
+        let h = 1;
+
+        while (s.size > 0) {
+            let [node, height] = s.pop();
+
+            h = height;
+
+            if (node.left != null) {
+                s.push([node.left, height + 1]);
+            }
+
+            if (node.right != null) {
+                s.push([node.right, height + 1]);
+            }
+        }
+
+        return h;
+    }
+
     print() {
         if (this.root == null) {
             return null;
@@ -204,3 +231,6 @@ for (let i = 1; i <= 6; i++) {
 
 console.log(b.root);
 b.print();
+
+const result = b.getHeight();
+console.log(result);
