@@ -10,7 +10,7 @@ class Queue {
         this.head = null;
         this.tail = null;
 
-        this.lenght = 0;
+        this.length = 0;
     }
 
     enqueue(val) {
@@ -24,7 +24,7 @@ class Queue {
             this.tail = newNode;
         }
 
-        this.lenght += 1;
+        this.length += 1;
     }
 
     dequeue() {
@@ -40,7 +40,7 @@ class Queue {
             this.tail = null;
         }
 
-        this.lenght -= 1;
+        this.length -= 1;
 
         return val;
     }
@@ -56,7 +56,6 @@ class Queue {
 
         while (curr != null) {
             res.push(curr.val);
-
             curr = curr.next;
         }
 
@@ -89,7 +88,7 @@ class BinaryTree {
         let q = new Queue();
         q.enqueue(this.root);
 
-        while (q.lenght > 0) {
+        while (q.length > 0) {
             let node = q.dequeue();
 
             if (node.left != null) {
@@ -107,45 +106,12 @@ class BinaryTree {
             }
         }
     }
-
-    getHeight() {
-        if (this.root == null) {
-            return 0;
-        }
-
-        let q = new Queue();
-        q.enqueue(this.root);
-
-        let height = 0;
-
-        while (q.lenght > 0) {
-            let qLenght = q.lenght;
-
-            for (let i = 0; i < qLenght; i++) {
-                let node = q.dequeue();
-
-                if (node.left != null) {
-                    q.enqueue(node.left);
-                }
-
-                if (node.right != null) {
-                    q.enqueue(node.right);
-                }
-            }
-
-            height += 1;
-        }
-
-        return height;
-    }
 }
 
 const b = new BinaryTree();
 
-for (let i = 1; i <= 9; i++) {
-    //
+for (let i = 1; i <= 8; i++) {
     b.insert(i);
 }
 
-const result = b.getHeight();
-console.log(result);
+console.log(b.root);
