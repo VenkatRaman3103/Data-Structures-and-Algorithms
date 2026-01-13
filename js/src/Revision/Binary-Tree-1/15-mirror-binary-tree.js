@@ -194,10 +194,33 @@ class BinaryTree {
 
         this.root = root;
     }
+
+    mirror() {
+        if (this.root == null) {
+            return null;
+        }
+
+        let q = new Queue();
+        q.enqueue(this.root);
+
+        while (q.lenght > 0) {
+            let node = q.dequeue();
+
+            [node.left, node.right] = [node.right, node.left];
+
+            if (node.left != null) {
+                q.enqueue(node.left);
+            }
+
+            if (node.right != null) {
+                q.enqueue(node.right);
+            }
+        }
+    }
 }
 
 const b = new BinaryTree();
 
 const nodes = [1, 2, 3, 4, null, 6];
 b.make(nodes);
-console.log(b.root);
+b.mirror();
