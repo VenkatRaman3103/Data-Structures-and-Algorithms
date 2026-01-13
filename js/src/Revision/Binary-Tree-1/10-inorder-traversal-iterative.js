@@ -46,7 +46,6 @@ class Queue {
 
     print() {
         if (this.head == null) {
-            console.log([]);
             return [];
         }
 
@@ -56,6 +55,7 @@ class Queue {
 
         while (curr != null) {
             res.push(curr.val);
+
             curr = curr.next;
         }
 
@@ -178,22 +178,26 @@ class BinaryTree {
             let node = q.dequeue();
 
             if (arr[i] != null && i < arr.length) {
-                node.left = new TreeNode(arr[i]);
+                let leftNode = new TreeNode(arr[i]);
+                node.left = leftNode;
                 q.enqueue(node.left);
             }
             i++;
 
             if (arr[i] != null && i < arr.length) {
-                node.right = new TreeNode(arr[i]);
+                let rightNode = new TreeNode(arr[i]);
+                node.right = rightNode;
                 q.enqueue(node.right);
             }
             i++;
         }
 
         this.root = root;
+
+        return this.root;
     }
 
-    postOrder() {
+    inOrder() {
         if (this.root == null) {
             return [];
         }
@@ -201,30 +205,29 @@ class BinaryTree {
         let res = [];
 
         let stack = new Stack();
-        stack.push(this.root);
 
-        while (stack.size > 0) {
-            let node = stack.pop();
-            res.unshift(node.val);
+        let curr = this.root;
 
-            if (node.left != null) {
-                stack.push(node.left);
-            }
-
-            if (node.right != null) {
-                stack.push(node.right);
+        while (stack.size > 0 || curr != null) {
+            if (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
+            } else {
+                curr = stack.pop();
+                res.push(curr.val);
+                curr = curr.right;
             }
         }
 
-        return res;
+        console.log(res);
     }
 }
 
-const bo = new BinaryTree();
-//
+const b = new BinaryTree();
 
-const nodes = [1, 2, 3, 4, 5, 6, 7];
+const nodes = [1, 2, 3, 4, null, 6, 7];
 b.make(nodes);
 
-const result = b.postOrder();
-console.log(result);
+b.inOrder();
+
+console.log(b.root);
