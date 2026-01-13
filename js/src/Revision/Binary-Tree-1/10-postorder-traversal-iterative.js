@@ -46,6 +46,7 @@ class Queue {
 
     print() {
         if (this.head == null) {
+            console.log([]);
             return [];
         }
 
@@ -122,12 +123,107 @@ class Stack {
     }
 }
 
-const s = new Stack();
-
-for (let i = 1; i <= 5; i++) {
-    s.push(i);
+class TreeNode {
+    constructor(val) {
+        this.val = val;
+        this.left = null;
+        this.right = null;
+    }
 }
 
-const removed = s.pop();
-console.log(removed);
-s.print();
+class BinaryTree {
+    constructor() {
+        this.root = null;
+    }
+
+    insert(val) {
+        let newNode = new TreeNode(val);
+
+        if (this.root == null) {
+            this.root = newNode;
+            return;
+        }
+
+        let q = new Queue();
+        q.enqueue(this.root);
+
+        while (q.length > 0) {
+            let node = q.dequeue();
+
+            if (node.left != null) {
+                q.enqueue(node.left);
+            } else {
+                node.left = newNode;
+                return;
+            }
+
+            if (node.right != null) {
+                q.enqueue(node.right);
+            } else {
+                node.right = newNode;
+                return;
+            }
+        }
+    }
+
+    make(arr) {
+        let root = new TreeNode(arr[0]);
+
+        let q = new Queue();
+        q.enqueue(root);
+
+        let i = 1;
+
+        while (q.length > 0) {
+            let node = q.dequeue();
+
+            if (arr[i] != null && i < arr.length) {
+                node.left = new TreeNode(arr[i]);
+                q.enqueue(node.left);
+            }
+            i++;
+
+            if (arr[i] != null && i < arr.length) {
+                node.right = new TreeNode(arr[i]);
+                q.enqueue(node.right);
+            }
+            i++;
+        }
+
+        this.root = root;
+    }
+
+    postOrder() {
+        if (this.root == null) {
+            return [];
+        }
+
+        let res = [];
+
+        let stack = new Stack();
+        stack.push(this.root);
+
+        while (stack.size > 0) {
+            let node = stack.pop();
+            res.unshift(node.val);
+
+            if (node.left != null) {
+                stack.push(node.left);
+            }
+
+            if (node.right != null) {
+                stack.push(node.right);
+            }
+        }
+
+        return res;
+    }
+}
+
+const b = new BinaryTree();
+
+const nodes = [1, 2, 3, 4, 5, 6, 7];
+b.make(nodes);
+
+const result = b.postOrder();
+console.log(result);
