@@ -1,32 +1,32 @@
 import { BinaryTree } from './modules.js';
 
-function count(root, acc, res) {
+function sum(root, acc, res) {
     if (root == null) {
         return;
     }
+
+    acc += root.val;
 
     if (root.left == null && root.right == null) {
         res.push(acc);
     }
 
-    acc += 1;
-
-    count(root.left, acc, res);
-    count(root.right, acc, res);
+    sum(root.left, acc, res);
+    sum(root.right, acc, res);
 }
 
-function countFromRootToLeaf(root) {
+function sumOfPaths(root) {
     let res = [];
 
-    count(root, 1, res);
+    sum(root, 0, res);
 
     return res;
 }
 
 const binaryTree = new BinaryTree();
 
-const nodes = [1, 2, 3, 4, 5, 6, 7, 8];
+const nodes = [1, 2, 3, 4, 5, 6];
 binaryTree.make(nodes);
 
-const result = countFromRootToLeaf(binaryTree.root);
+const result = sumOfPaths(binaryTree.root);
 console.log(result);
