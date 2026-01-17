@@ -109,7 +109,30 @@ class BinaryTree {
     }
 
     make(arr) {
-        //
+        let root = new TreeNode(arr[0]);
+
+        let q = new Queue();
+        q.enqueue(root);
+
+        let i = 1;
+
+        while (q.length > 0) {
+            let node = q.dequeue();
+
+            if (arr[i] != null && i < arr.length) {
+                node.left = new TreeNode(arr[i]);
+                q.enqueue(node.left);
+            }
+            i += 1;
+
+            if (arr[i] != null && i < arr.length) {
+                node.right = new TreeNode(arr[i]);
+                q.enqueue(node.right);
+            }
+            i += 1;
+        }
+
+        this.root = root;
     }
 
     preOrder() {
@@ -127,8 +150,7 @@ class BinaryTree {
 
 const b = new BinaryTree();
 
-for (let i = 1; i <= 5; i++) {
-    b.insert(i);
-}
+const nodes = [1, 2, 3, null, 5, null, 7];
+b.make(nodes);
 
 console.log(b.root);
