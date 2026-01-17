@@ -60,6 +60,7 @@ class Queue {
         }
 
         console.log(res);
+
         return res;
     }
 }
@@ -67,8 +68,8 @@ class Queue {
 class TreeNode {
     constructor(val) {
         this.val = val;
-        this.right = null;
         this.left = null;
+        this.right = null;
     }
 }
 
@@ -78,7 +79,7 @@ class BinaryTree {
     }
 
     insert(val) {
-        const newNode = new TreeNode(val);
+        let newNode = new TreeNode(val);
 
         if (this.root == null) {
             this.root = newNode;
@@ -105,6 +106,22 @@ class BinaryTree {
                 return;
             }
         }
+    }
+
+    make(arr) {
+        //
+    }
+
+    preOrder() {
+        //
+    }
+
+    inOrder() {
+        //
+    }
+
+    postOrder() {
+        //
     }
 }
 
