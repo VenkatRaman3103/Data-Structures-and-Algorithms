@@ -71,6 +71,7 @@ function bfs(graph, start) {
     q.enqueue(start);
 
     let visited = new Set();
+    visited.add(start);
 
     while (q.length > 0) {
         let vertex = q.dequeue();
