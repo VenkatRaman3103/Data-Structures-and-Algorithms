@@ -88,7 +88,29 @@ graph.addEdge(2, 3);
 graph.addEdge(2, 4);
 
 function dfs(graph, start) {
-    //
+    let res = [];
+
+    let visited = new Set();
+
+    let stack = new Stack();
+    stack.push(start);
+    visited.add(start);
+
+    while (stack.size > 0) {
+        let vertex = stack.pop();
+        res.push(vertex);
+
+        let children = graph[vertex];
+
+        for (let child of children) {
+            if (!visited.has(child)) {
+                visited.add(child);
+                stack.push(child);
+            }
+        }
+    }
+
+    return res;
 }
 
 const result = dfs(graph.adjList, 1);
