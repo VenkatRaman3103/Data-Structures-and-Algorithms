@@ -1,60 +1,56 @@
-class QueueNode {
+class StackNode {
     constructor(val) {
         this.val = val;
-        this.next = null;
+        this.below = null;
     }
 }
 
-class Queue {
+class Stack {
     constructor() {
-        this.head = null;
-        this.tail = null;
+        this.top = null;
 
-        this.length = 0;
+        this.size = 0;
     }
 
-    enqueue(val) {
-        let newNode = new QueueNode(val);
+    push(val) {
+        let newNode = new StackNode(val);
 
-        if (this.head == null) {
-            this.head = newNode;
-            this.tail = newNode;
+        if (this.top == null) {
+            this.top = newNode;
         } else {
-            this.tail.next = newNode;
-            this.tail = newNode;
+            newNode.below = this.top;
+            this.top = newNode;
         }
 
-        this.length += 1;
+        this.size += 1;
     }
 
-    dequeue() {
-        if (this.head == null) {
+    pop() {
+        if (this.top == null) {
             return null;
         }
 
-        let val = this.head.val;
+        const val = this.top.val;
 
-        this.head = this.head.next;
+        this.top = this.top.below;
 
-        if (this.head == null) {
-            this.tail = null;
-        }
+        this.size -= 1;
 
         return val;
     }
 
     print() {
-        if (this.head == null) {
+        if (this.top == null) {
             return [];
         }
 
         let res = [];
 
-        let curr = this.head;
+        let curr = this.top;
 
         while (curr != null) {
             res.push(curr.val);
-            curr = curr.next;
+            curr = curr.below;
         }
 
         console.log(res);
@@ -78,7 +74,7 @@ class Graph {
     }
 }
 
-let graph = new Graph();
+const graph = new Graph();
 
 graph.addVertex(1);
 graph.addVertex(2);
@@ -90,4 +86,31 @@ graph.addEdge(1, 3);
 graph.addEdge(2, 3);
 graph.addEdge(2, 4);
 
-console.log(graph.adjList);
+function dfs(graph, start) {
+    let res = [];
+
+    let visited = new Set();
+
+    let stack = new Stack();
+    stack.push(start);
+    visited.add(start);
+
+    while (stack.size > 0) {
+        let vertex = stack.pop();
+        res.push(vertex);
+
+        let children = graph[vertex];
+
+        for (let child of children) {
+            if (!visited.has(child)) {
+                visited.add(child);
+                stack.push(child);
+            }
+        }
+    }
+
+    return res;
+}
+
+const result = dfs(graph.adjList, 1);
+console.log(result);
