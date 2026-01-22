@@ -46,15 +46,20 @@ class Queue {
     }
 }
 
+function sleep(ms) {
+    const end = Date.now() + ms;
+    while (Date.now() < end) {}
+}
+
 function printGrid(grid) {
     for (let r = 0; r < grid.length; r++) {
         for (let c = 0; c < grid[0].length; c++) {
             if (grid[r][c] === 1) {
-                process.stdout.write('██');
-            } else if (grid[r][c] === '▒') {
-                process.stdout.write('▒▒');
+                process.stdout.write('W ');
+            } else if (grid[r][c] === 'V') {
+                process.stdout.write('* ');
             } else {
-                process.stdout.write('░░');
+                process.stdout.write('. ');
             }
         }
         console.log();
@@ -67,11 +72,18 @@ function fmt([a, b]) {
 }
 
 const grid = [
-    [0, 0, 0, 0],
-    [1, 1, 0, 0],
-    [0, 1, 0, 0],
-    [0, 1, 1, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [1, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 1, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 1, 1, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 1, 1, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ];
+
 let ROWS = grid.length;
 let COLS = grid[0].length;
 let visited = new Set();
@@ -89,8 +101,10 @@ visited.add(fmt([0, 0]));
 while (q.length > 0) {
     let [r, c] = q.dequeue();
 
-    grid[r][c] = '▒';
+    grid[r][c] = 'V';
+    console.clear();
     printGrid(grid);
+    sleep(200);
 
     for (let [dr, dc] of dirs) {
         let nr = r + dr;
