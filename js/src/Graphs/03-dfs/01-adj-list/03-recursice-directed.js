@@ -2,6 +2,7 @@ class Graph {
     constructor() {
         this.adjList = {};
     }
+    //
 
     addVertex(v) {
         if (this.adjList[v] == undefined) {
