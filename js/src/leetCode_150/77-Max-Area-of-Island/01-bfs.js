@@ -46,8 +46,8 @@ class QueueStruct {
     }
 }
 
-var numIslands = function (grid) {
-    let count = 0;
+var maxAreaOfIsland = function (grid) {
+    let maxArea = 0;
 
     let visited = new Set();
 
@@ -62,9 +62,13 @@ var numIslands = function (grid) {
     ];
 
     function bfs(sr, sc) {
+        let area = 0;
+
         let q = new QueueStruct();
         q.enqueue([sr, sc]);
         visited.add(`${sr},${sc}`);
+
+        area += 1;
 
         while (q.length > 0) {
             let [r, c] = q.dequeue();
@@ -78,34 +82,36 @@ var numIslands = function (grid) {
                     nc < COLUMNS &&
                     nr >= 0 &&
                     nc >= 0 &&
-                    grid[nr][nc] == '1' &&
-                    !visited.has(`${nr},${nc}`)
+                    !visited.has(`${nr},${nc}`) &&
+                    grid[nr][nc] == '1'
                 ) {
                     q.enqueue([nr, nc]);
                     visited.add(`${nr},${nc}`);
+                    area += 1;
                 }
             }
         }
+
+        maxArea = Math.max(maxArea, area);
     }
 
     for (let r = 0; r < ROWS; r++) {
         for (let c = 0; c < COLUMNS; c++) {
-            if (grid[r][c] == '1' && !visited.has(`${r},${c}`)) {
-                count += 1;
+            if (!visited.has(`${r},${c}`) && grid[r][c] == '1') {
                 bfs(r, c);
             }
         }
     }
 
-    return count;
+    return maxArea;
 };
 
 const grid = [
-    ['1', '1', '0', '0', '0'],
+    ['1', '1', '1', '0', '0'],
     ['1', '1', '0', '0', '0'],
     ['0', '0', '1', '0', '0'],
     ['0', '0', '0', '1', '1'],
 ];
 
-const result = numIslands(grid);
+const result = maxAreaOfIsland(grid);
 console.log(result);
