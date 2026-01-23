@@ -65,7 +65,7 @@ n4.neighbors = [n1, n3];
 
 var cloneGraph = function (node) {
     if (node == null) {
-        return null;
+        return nul;
     }
 
     let oldToNew = new Map();
