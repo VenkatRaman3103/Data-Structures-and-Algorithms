@@ -79,6 +79,7 @@ const grid = [
     [0, 0, 1, 1, 1, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 ];
+
 let ROWS = grid.length;
 let COLS = grid[0].length;
 
