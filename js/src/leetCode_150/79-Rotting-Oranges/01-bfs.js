@@ -138,6 +138,5 @@ const grid = [
     [1, 1, 0],
     [0, 1, 1],
 ];
-
 const result = orangesRotting(grid);
 console.log(result);

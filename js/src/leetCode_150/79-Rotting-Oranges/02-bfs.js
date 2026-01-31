@@ -64,3 +64,75 @@ class QueueStruct {
         return res;
     }
 }
+
+function fmt(a, b) {
+    return `${a},${b}`;
+}
+
+var orangesRotting = function (grid) {
+    let COLS = grid[0].length;
+    let ROWS = grid.length;
+    let dirs = [
+        [-1, 0],
+        [0, 1],
+        [1, 0],
+        [0, -1],
+    ];
+
+    let fresh = 0;
+
+    let visited = new Set();
+
+    let q = new QueueStruct();
+
+    for (let r = 0; r < ROWS; r++) {
+        for (let c = 0; c < COLS; c++) {
+            if (grid[r][c] == 2) {
+                q.enqueue([r, c]);
+                visited.add(fmt(r, c));
+            } else if (grid[r][c] == 1) {
+                fresh += 1;
+            }
+        }
+    }
+
+    let count = 0;
+
+    while (q.length > 0 && fresh > 0) {
+        let qLength = q.length;
+
+        for (let i = 0; i < qLength; i++) {
+            let [r, c] = q.dequeue();
+
+            for (let [dr, dc] of dirs) {
+                let nr = r + dr;
+                let nc = c + dc;
+
+                if (
+                    nr < ROWS &&
+                    nc < COLS &&
+                    nr >= 0 &&
+                    nc >= 0 &&
+                    !visited.has(fmt(nr, nc)) &&
+                    grid[nr][nc] == 1
+                ) {
+                    visited.add(fmt(nr, nc));
+                    q.enqueue([nr, nc]);
+                    fresh -= 1;
+                }
+            }
+        }
+
+        count += 1;
+    }
+
+    return fresh == 0 ? count : -1;
+};
+
+const grid = [
+    [2, 1, 1],
+    [1, 1, 0],
+    [0, 1, 1],
+];
+const result = orangesRotting(grid);
+console.log(result);
