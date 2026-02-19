@@ -1,0 +1,14 @@
+/home/venkat/Code/Data-Structures-and-Algorithms/cs/bin/Debug/net10.0/cs
+/home/venkat/Code/Data-Structures-and-Algorithms/cs/bin/Debug/net10.0/cs.deps.json
+/home/venkat/Code/Data-Structures-and-Algorithms/cs/bin/Debug/net10.0/cs.runtimeconfig.json
+/home/venkat/Code/Data-Structures-and-Algorithms/cs/bin/Debug/net10.0/cs.dll
+/home/venkat/Code/Data-Structures-and-Algorithms/cs/bin/Debug/net10.0/cs.pdb
+/home/venkat/Code/Data-Structures-and-Algorithms/cs/obj/Debug/net10.0/cs.GeneratedMSBuildEditorConfig.editorconfig
+/home/venkat/Code/Data-Structures-and-Algorithms/cs/obj/Debug/net10.0/cs.AssemblyInfoInputs.cache
+/home/venkat/Code/Data-Structures-and-Algorithms/cs/obj/Debug/net10.0/cs.AssemblyInfo.cs
+/home/venkat/Code/Data-Structures-and-Algorithms/cs/obj/Debug/net10.0/cs.csproj.CoreCompileInputs.cache
+/home/venkat/Code/Data-Structures-and-Algorithms/cs/obj/Debug/net10.0/cs.dll
+/home/venkat/Code/Data-Structures-and-Algorithms/cs/obj/Debug/net10.0/refint/cs.dll
+/home/venkat/Code/Data-Structures-and-Algorithms/cs/obj/Debug/net10.0/cs.pdb
+/home/venkat/Code/Data-Structures-and-Algorithms/cs/obj/Debug/net10.0/cs.genruntimeconfig.cache
+/home/venkat/Code/Data-Structures-and-Algorithms/cs/obj/Debug/net10.0/ref/cs.dll

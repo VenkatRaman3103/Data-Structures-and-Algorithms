@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "oEXUvKNq5+0=",
+  "success": true,
+  "projectFilePath": "/home/venkat/Code/Data-Structures-and-Algorithms/cs/cs.csproj",
+  "expectedPackageFiles": [
+    "/home/venkat/.nuget/packages/microsoft.aspnetcore.app.ref/10.0.0/microsoft.aspnetcore.app.ref.10.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
