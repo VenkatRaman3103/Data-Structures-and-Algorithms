@@ -23,6 +23,3 @@ const strs = ['eat', 'tea', 'tan', 'ate', 'nat', 'bat'];
 
 const result = groupAnagrams(strs);
 console.log(result);
-
-// [1, 0, 0, 0, 1] → "10001"
-// [10, 0, 0, 0, 1] → "10001" ❌ (same string!)
