@@ -10,10 +10,10 @@ var groupAnagrams = function (strs) {
 
         for (let char of word) {
             let index = char.charCodeAt(0) - 'a'.charCodeAt(0);
-            keyGenArray[index] = '#';
+            keyGenArray[index] += 1;
         }
 
-        let key = keyGenArray.join('');
+        let key = keyGenArray.join('#');
 
         if (map[key] == undefined) {
             map[key] = [word];
