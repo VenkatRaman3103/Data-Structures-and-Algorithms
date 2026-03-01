@@ -1,10 +1,15 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -g
+CFLAGS = -Wall -Wextra -std=c11
 
-all: main
+TARGET = main
+SRC = main.c hashtable/hashtable.c
+OBJ = $(SRC:.c=.o)
 
-main: main.c
-	$(CC) $(CFLAGS) -o main main.c
+$(TARGET): $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(TARGET)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f main
+	rm -f $(OBJ) $(TARGET)
