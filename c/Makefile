@@ -2,7 +2,8 @@ CC = gcc
 CFLAGS = -Wall -Wextra -std=c11
 
 TARGET = main
-SRC = main.c hashtable/hashtable.c
+SRC = main.c
+# SRC = main.c hashtable/hashtable.c
 OBJ = $(SRC:.c=.o)
 
 $(TARGET): $(OBJ)
