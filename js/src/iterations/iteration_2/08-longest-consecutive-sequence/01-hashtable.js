@@ -3,29 +3,20 @@
  * @return {number}
  */
 var longestConsecutive = function (nums) {
-    let hashTable = {};
+    let hashTable = new Set();
 
-    for (let i = 0; i < nums.length; i++) {
-        let num = nums[i];
-
-        if (hashTable[num] == undefined) {
-            hashTable[num] = 1;
-        } else {
-            hashTable[num] += 1;
-        }
+    for (let n of nums) {
+        hashTable.add(n);
     }
 
     let longest = 0;
 
-    for (let i = 0; i < nums.length; i++) {
-        let num = nums[i];
-
-        if (hashTable[num - 1] == undefined) {
-            let curr = num;
-
+    for (let n of nums) {
+        if (!hashTable.has(n - 1)) {
+            let curr = n;
             let len = 1;
 
-            while (hashTable[curr + 1] != undefined) {
+            while (hashTable.has(curr + 1)) {
                 curr += 1;
                 len += 1;
             }
