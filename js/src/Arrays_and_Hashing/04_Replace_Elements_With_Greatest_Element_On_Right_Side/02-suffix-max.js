@@ -5,9 +5,19 @@
 var replaceElements = function (arr) {
     let n = arr.length;
 
-    for (let i = n - 1; i > 0; i--) {
-        console.log(arr[i]);
+    let result = new Array(n);
+
+    let rightMax = -1;
+
+    for (let i = n - 1; i >= 0; i--) {
+        let curr = arr[i];
+
+        result[i] = rightMax;
+
+        rightMax = Math.max(curr, rightMax);
     }
+
+    return result;
 };
 
 const arr = [17, 18, 5, 4, 6, 1];
