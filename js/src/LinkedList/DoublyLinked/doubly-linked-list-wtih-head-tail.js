@@ -1,31 +1,29 @@
 class Node {
     constructor(val) {
         this.val = val;
-        this.prev = null;
         this.next = null;
+        this.prev = null;
     }
 }
 
-class DoublyLinkedList {
+class DoublyLinkedListHL {
     constructor() {
         this.head = null;
+        this.tail = null;
+
         this.length = 0;
     }
 
     append(val) {
         let newNode = new Node(val);
 
-        if (this.head == null) {
+        if (this.head == null && this.tail == null) {
             this.head = newNode;
+            this.tail = newNode;
         } else {
-            let curr = this.head;
-
-            while (curr.next != null) {
-                curr = curr.next;
-            }
-
-            curr.next = newNode;
-            newNode.prev = curr;
+            this.tail.next = newNode;
+            newNode.prev = this.tail;
+            this.tail = newNode;
         }
 
         this.length += 1;
@@ -34,8 +32,9 @@ class DoublyLinkedList {
     prepend(val) {
         let newNode = new Node(val);
 
-        if (this.head == null) {
+        if (this.head == null && this.tail == null) {
             this.head = newNode;
+            this.tail = newNode;
         } else {
             newNode.next = this.head;
             this.head.prev = newNode;
@@ -45,16 +44,18 @@ class DoublyLinkedList {
         this.length += 1;
     }
 
-    removeFrist() {
+    removeFirst() {
         if (this.head == null) {
             return null;
         }
 
         if (this.head.next == null) {
             this.head = null;
+            this.tail = null;
         } else {
-            this.head = this.head.next;
-            this.head.prev = null;
+            let second_first = this.head.next;
+            second_first.prev = null;
+            this.head = second_first;
         }
 
         this.length -= 1;
@@ -67,15 +68,11 @@ class DoublyLinkedList {
 
         if (this.head.next == null) {
             this.head = null;
+            this.tail = null;
         } else {
-            let curr = this.head;
-
-            while (curr.next != null) {
-                curr = curr.next;
-            }
-
-            curr.prev.next = null;
-            curr.prev = null;
+            let second_last = this.tail.prev;
+            second_last.next = null;
+            this.tail = second_last;
         }
 
         this.length -= 1;
@@ -95,12 +92,13 @@ class DoublyLinkedList {
     }
 }
 
-const doublylinkedlist = new DoublyLinkedList();
+const doublylinkedlistHL = new DoublyLinkedListHL();
 
 for (let i = 1; i <= 10; i++) {
-    doublylinkedlist.append(i);
+    doublylinkedlistHL.append(i);
 }
 
-doublylinkedlist.prepend(0);
-doublylinkedlist.removeFrist();
-doublylinkedlist.print();
+doublylinkedlistHL.prepend(0);
+doublylinkedlistHL.removeFirst();
+doublylinkedlistHL.removeLast();
+doublylinkedlistHL.print();
