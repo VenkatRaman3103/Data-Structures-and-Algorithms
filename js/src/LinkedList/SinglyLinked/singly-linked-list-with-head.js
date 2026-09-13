@@ -42,7 +42,7 @@ class LinkedList {
         this.length += 1;
     }
 
-    removeFrist() {
+    removeFirst() {
         if (this.head == null) {
             return null;
         }
@@ -57,15 +57,19 @@ class LinkedList {
             return null;
         }
 
-        let prev = null;
-        let curr = this.head;
+        if (this.head.next == null) {
+            this.head = null;
+        } else {
+            let prev = null;
+            let curr = this.head;
 
-        while (curr.next != null) {
-            prev = curr;
-            curr = curr.next;
+            while (curr.next != null) {
+                prev = curr;
+                curr = curr.next;
+            }
+
+            prev.next = null;
         }
-
-        prev.next = null;
 
         this.length -= 1;
     }
@@ -95,7 +99,7 @@ for (let i = size / 2; i > 0; i--) {
     linkedlist.prepend(i);
 }
 
-linkedlist.removeFrist();
+linkedlist.removeFirst();
 linkedlist.removeLast();
 
 linkedlist.print();
