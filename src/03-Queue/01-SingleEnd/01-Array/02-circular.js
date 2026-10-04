@@ -1,4 +1,4 @@
-class CircularCapacityQueue {
+class CircularArrayQueue {
     constructor(capacity) {
         this.queue = new Array(capacity);
 
