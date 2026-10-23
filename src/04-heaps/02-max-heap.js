@@ -95,13 +95,3 @@ class MaxHeap {
         return this.heap.length == 0;
     }
 }
-
-const maxHeap = new MaxHeap();
-
-const arr = [1, 10, 2, 11, 12, 3, 4, 13, 14];
-
-for (let i = 0; i < arr.length; i++) {
-    let key = arr[i];
-
-    maxHeap.insert(key);
-}
